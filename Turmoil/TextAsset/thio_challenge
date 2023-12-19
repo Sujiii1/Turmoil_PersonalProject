@@ -1,0 +1,3768 @@
+{
+  "Name": "thio_challenge",
+  "TenantStartingMoney": 200000,
+  "LevelStartingMoney": 2000,
+  "LevelConfigName": "levelconfig_thio",
+  "LevelLengths": null,
+  "AIConfigName": "turmoil",
+  "AIUpgradePreferences": [
+    "mole",
+    "dowser",
+    "scanner"
+  ],
+  "AIUpgradePreferenceAdd": 100,
+  "LoanUnitSize": 500,
+  "LoanInterest": 0.25,
+  "LoanInterestPerUnit": 0.0,
+  "MaxBankruptOccasions": 3,
+  "LandAuctionConfig": {
+    "BidStart": 2000,
+    "BidThresholds": [
+      0,
+      5500,
+      11500
+    ],
+    "BidIncrements": [
+      1000,
+      2000,
+      3000
+    ],
+    "Valid": true
+  },
+  "Areas": [
+    {
+      "Province": "hills",
+      "Vertices": [
+        {
+          "Position": {
+            "I": {
+              "m_rawValue": 655360
+            },
+            "J": {
+              "m_rawValue": 9699328
+            }
+          },
+          "OilSupply": {
+            "m_rawValue": 0
+          },
+          "GasSupply": {
+            "m_rawValue": 0
+          },
+          "RockAmount": {
+            "m_rawValue": 0
+          },
+          "LavaAmount": {
+            "m_rawValue": 0
+          },
+          "DiamondAttractiveness": {
+            "m_rawValue": 0
+          }
+        },
+        {
+          "Position": {
+            "I": {
+              "m_rawValue": 14548992
+            },
+            "J": {
+              "m_rawValue": 7405568
+            }
+          },
+          "OilSupply": {
+            "m_rawValue": 0
+          },
+          "GasSupply": {
+            "m_rawValue": 0
+          },
+          "RockAmount": {
+            "m_rawValue": 0
+          },
+          "LavaAmount": {
+            "m_rawValue": 0
+          },
+          "DiamondAttractiveness": {
+            "m_rawValue": 0
+          }
+        },
+        {
+          "Position": {
+            "I": {
+              "m_rawValue": 720896
+            },
+            "J": {
+              "m_rawValue": 35848192
+            }
+          },
+          "OilSupply": {
+            "m_rawValue": 0
+          },
+          "GasSupply": {
+            "m_rawValue": 0
+          },
+          "RockAmount": {
+            "m_rawValue": 0
+          },
+          "LavaAmount": {
+            "m_rawValue": 0
+          },
+          "DiamondAttractiveness": {
+            "m_rawValue": 0
+          }
+        },
+        {
+          "Position": {
+            "I": {
+              "m_rawValue": 21692416
+            },
+            "J": {
+              "m_rawValue": 32178176
+            }
+          },
+          "OilSupply": {
+            "m_rawValue": 0
+          },
+          "GasSupply": {
+            "m_rawValue": 0
+          },
+          "RockAmount": {
+            "m_rawValue": 0
+          },
+          "LavaAmount": {
+            "m_rawValue": 0
+          },
+          "DiamondAttractiveness": {
+            "m_rawValue": 0
+          }
+        },
+        {
+          "Position": {
+            "I": {
+              "m_rawValue": 851968
+            },
+            "J": {
+              "m_rawValue": 62390272
+            }
+          },
+          "OilSupply": {
+            "m_rawValue": 0
+          },
+          "GasSupply": {
+            "m_rawValue": 0
+          },
+          "RockAmount": {
+            "m_rawValue": 0
+          },
+          "LavaAmount": {
+            "m_rawValue": 0
+          },
+          "DiamondAttractiveness": {
+            "m_rawValue": 0
+          }
+        },
+        {
+          "Position": {
+            "I": {
+              "m_rawValue": 30474240
+            },
+            "J": {
+              "m_rawValue": 62455808
+            }
+          },
+          "OilSupply": {
+            "m_rawValue": 0
+          },
+          "GasSupply": {
+            "m_rawValue": 0
+          },
+          "RockAmount": {
+            "m_rawValue": 0
+          },
+          "LavaAmount": {
+            "m_rawValue": 0
+          },
+          "DiamondAttractiveness": {
+            "m_rawValue": 0
+          }
+        }
+      ],
+      "TriangleIndices": [
+        0,
+        2,
+        1,
+        2,
+        1,
+        3,
+        2,
+        3,
+        4,
+        3,
+        4,
+        5
+      ],
+      "EstatePositions": [
+        {
+          "I": {
+            "m_rawValue": 12058624
+          },
+          "J": {
+            "m_rawValue": 9371648
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 2686976
+          },
+          "J": {
+            "m_rawValue": 13434880
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 7143424
+          },
+          "J": {
+            "m_rawValue": 13107200
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 11403264
+          },
+          "J": {
+            "m_rawValue": 12976128
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 2818048
+          },
+          "J": {
+            "m_rawValue": 17235968
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 7012352
+          },
+          "J": {
+            "m_rawValue": 17039360
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 11272192
+          },
+          "J": {
+            "m_rawValue": 16973824
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 3014656
+          },
+          "J": {
+            "m_rawValue": 21168128
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 7733248
+          },
+          "J": {
+            "m_rawValue": 21102592
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 12386304
+          },
+          "J": {
+            "m_rawValue": 20905984
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 3604480
+          },
+          "J": {
+            "m_rawValue": 25493504
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 9437184
+          },
+          "J": {
+            "m_rawValue": 25231360
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 14876672
+          },
+          "J": {
+            "m_rawValue": 24969216
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 4325376
+          },
+          "J": {
+            "m_rawValue": 29556736
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 11141120
+          },
+          "J": {
+            "m_rawValue": 29360128
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 17367040
+          },
+          "J": {
+            "m_rawValue": 29360128
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 4194304
+          },
+          "J": {
+            "m_rawValue": 34340864
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 11665408
+          },
+          "J": {
+            "m_rawValue": 34013184
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 18219008
+          },
+          "J": {
+            "m_rawValue": 34340864
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 4259840
+          },
+          "J": {
+            "m_rawValue": 38862848
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 11403264
+          },
+          "J": {
+            "m_rawValue": 38666240
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 17825792
+          },
+          "J": {
+            "m_rawValue": 39387136
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 3735552
+          },
+          "J": {
+            "m_rawValue": 43712512
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 8978432
+          },
+          "J": {
+            "m_rawValue": 43581440
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 13434880
+          },
+          "J": {
+            "m_rawValue": 43778048
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 18612224
+          },
+          "J": {
+            "m_rawValue": 44105728
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 3538944
+          },
+          "J": {
+            "m_rawValue": 49086464
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 8519680
+          },
+          "J": {
+            "m_rawValue": 48824320
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 13565952
+          },
+          "J": {
+            "m_rawValue": 48889856
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 19267584
+          },
+          "J": {
+            "m_rawValue": 48955392
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 3211264
+          },
+          "J": {
+            "m_rawValue": 54394880
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 8388608
+          },
+          "J": {
+            "m_rawValue": 54394880
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 14090240
+          },
+          "J": {
+            "m_rawValue": 54394880
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 18743296
+          },
+          "J": {
+            "m_rawValue": 54657024
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 22544384
+          },
+          "J": {
+            "m_rawValue": 54788096
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 3145728
+          },
+          "J": {
+            "m_rawValue": 59506688
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 9109504
+          },
+          "J": {
+            "m_rawValue": 59375616
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 15007744
+          },
+          "J": {
+            "m_rawValue": 59310080
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 20054016
+          },
+          "J": {
+            "m_rawValue": 59768832
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 25296896
+          },
+          "J": {
+            "m_rawValue": 59834368
+          }
+        }
+      ],
+      "MinOilSupply": {
+        "m_rawValue": 41875931136000
+      },
+      "AvgOilSupply": {
+        "m_rawValue": 150753352089600
+      },
+      "MinGasSupply": {
+        "m_rawValue": 3435973836800
+      },
+      "AvgGasSupply": {
+        "m_rawValue": 5583457484800
+      },
+      "MinRockAmount": {
+        "m_rawValue": 65536
+      },
+      "AvgRockAmount": {
+        "m_rawValue": 196608
+      },
+      "MinLavaAmount": {
+        "m_rawValue": 65536
+      },
+      "AvgLavaAmount": {
+        "m_rawValue": 131072
+      },
+      "AvgDiamonds": {
+        "m_rawValue": 0
+      },
+      "OilRandomizations": [
+        {
+          "m_rawValue": 39321
+        },
+        {
+          "m_rawValue": 91750
+        },
+        {
+          "m_rawValue": 111411
+        },
+        {
+          "m_rawValue": 39321
+        },
+        {
+          "m_rawValue": 91750
+        },
+        {
+          "m_rawValue": 111411
+        },
+        {
+          "m_rawValue": 39321
+        },
+        {
+          "m_rawValue": 91750
+        },
+        {
+          "m_rawValue": 111411
+        }
+      ],
+      "OilLerpTarget": {
+        "m_rawValue": 150753352089600
+      },
+      "OilLerpFactor": {
+        "m_rawValue": 1073741824
+      },
+      "MinOilClamp": {
+        "m_rawValue": 64424509440000
+      },
+      "MaxOilClamp": {
+        "m_rawValue": 223338299392000
+      },
+      "DesiredTotalOil": {
+        "m_rawValue": 6012954214400000
+      }
+    },
+    {
+      "Province": "mountains",
+      "Vertices": [
+        {
+          "Position": {
+            "I": {
+              "m_rawValue": 27131904
+            },
+            "J": {
+              "m_rawValue": 5963776
+            }
+          },
+          "OilSupply": {
+            "m_rawValue": 0
+          },
+          "GasSupply": {
+            "m_rawValue": 0
+          },
+          "RockAmount": {
+            "m_rawValue": 0
+          },
+          "LavaAmount": {
+            "m_rawValue": 0
+          },
+          "DiamondAttractiveness": {
+            "m_rawValue": 0
+          }
+        },
+        {
+          "Position": {
+            "I": {
+              "m_rawValue": 50462720
+            },
+            "J": {
+              "m_rawValue": 6160384
+            }
+          },
+          "OilSupply": {
+            "m_rawValue": 0
+          },
+          "GasSupply": {
+            "m_rawValue": 0
+          },
+          "RockAmount": {
+            "m_rawValue": 0
+          },
+          "LavaAmount": {
+            "m_rawValue": 0
+          },
+          "DiamondAttractiveness": {
+            "m_rawValue": 0
+          }
+        },
+        {
+          "Position": {
+            "I": {
+              "m_rawValue": 36765696
+            },
+            "J": {
+              "m_rawValue": 21233664
+            }
+          },
+          "OilSupply": {
+            "m_rawValue": 0
+          },
+          "GasSupply": {
+            "m_rawValue": 0
+          },
+          "RockAmount": {
+            "m_rawValue": 0
+          },
+          "LavaAmount": {
+            "m_rawValue": 0
+          },
+          "DiamondAttractiveness": {
+            "m_rawValue": 0
+          }
+        },
+        {
+          "Position": {
+            "I": {
+              "m_rawValue": 8781824
+            },
+            "J": {
+              "m_rawValue": 52428800
+            }
+          },
+          "OilSupply": {
+            "m_rawValue": 0
+          },
+          "GasSupply": {
+            "m_rawValue": 0
+          },
+          "RockAmount": {
+            "m_rawValue": 0
+          },
+          "LavaAmount": {
+            "m_rawValue": 0
+          },
+          "DiamondAttractiveness": {
+            "m_rawValue": 0
+          }
+        },
+        {
+          "Position": {
+            "I": {
+              "m_rawValue": 51118080
+            },
+            "J": {
+              "m_rawValue": 43909120
+            }
+          },
+          "OilSupply": {
+            "m_rawValue": 0
+          },
+          "GasSupply": {
+            "m_rawValue": 0
+          },
+          "RockAmount": {
+            "m_rawValue": 0
+          },
+          "LavaAmount": {
+            "m_rawValue": 0
+          },
+          "DiamondAttractiveness": {
+            "m_rawValue": 0
+          }
+        }
+      ],
+      "TriangleIndices": [
+        0,
+        1,
+        2,
+        1,
+        2,
+        4,
+        2,
+        3,
+        4,
+        0,
+        2,
+        3
+      ],
+      "EstatePositions": [
+        {
+          "I": {
+            "m_rawValue": 28704768
+          },
+          "J": {
+            "m_rawValue": 7602176
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 33095680
+          },
+          "J": {
+            "m_rawValue": 7667712
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 38207488
+          },
+          "J": {
+            "m_rawValue": 7733248
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 43712512
+          },
+          "J": {
+            "m_rawValue": 7798784
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 26345472
+          },
+          "J": {
+            "m_rawValue": 11337728
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 31457280
+          },
+          "J": {
+            "m_rawValue": 11599872
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 37355520
+          },
+          "J": {
+            "m_rawValue": 11730944
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 43712512
+          },
+          "J": {
+            "m_rawValue": 11993088
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 24772608
+          },
+          "J": {
+            "m_rawValue": 15663104
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 30801920
+          },
+          "J": {
+            "m_rawValue": 15990784
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 37355520
+          },
+          "J": {
+            "m_rawValue": 15990784
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 43778048
+          },
+          "J": {
+            "m_rawValue": 16187392
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 24313856
+          },
+          "J": {
+            "m_rawValue": 21168128
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 30343168
+          },
+          "J": {
+            "m_rawValue": 20905984
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 37355520
+          },
+          "J": {
+            "m_rawValue": 20643840
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 43581440
+          },
+          "J": {
+            "m_rawValue": 20512768
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 48693248
+          },
+          "J": {
+            "m_rawValue": 20512768
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 24772608
+          },
+          "J": {
+            "m_rawValue": 26542080
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 31129600
+          },
+          "J": {
+            "m_rawValue": 26214400
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 37486592
+          },
+          "J": {
+            "m_rawValue": 25690112
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 43646976
+          },
+          "J": {
+            "m_rawValue": 25296896
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 48562176
+          },
+          "J": {
+            "m_rawValue": 25100288
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 26214400
+          },
+          "J": {
+            "m_rawValue": 31981568
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 31850496
+          },
+          "J": {
+            "m_rawValue": 31326208
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 38076416
+          },
+          "J": {
+            "m_rawValue": 30408704
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 43843584
+          },
+          "J": {
+            "m_rawValue": 29818880
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 48431104
+          },
+          "J": {
+            "m_rawValue": 29360128
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 27131904
+          },
+          "J": {
+            "m_rawValue": 36569088
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 33161216
+          },
+          "J": {
+            "m_rawValue": 35586048
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 38862848
+          },
+          "J": {
+            "m_rawValue": 34734080
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 43974656
+          },
+          "J": {
+            "m_rawValue": 33947648
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 48562176
+          },
+          "J": {
+            "m_rawValue": 33292288
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 29556736
+          },
+          "J": {
+            "m_rawValue": 41484288
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 35127296
+          },
+          "J": {
+            "m_rawValue": 40435712
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 40304640
+          },
+          "J": {
+            "m_rawValue": 39387136
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 44630016
+          },
+          "J": {
+            "m_rawValue": 38273024
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 48889856
+          },
+          "J": {
+            "m_rawValue": 37027840
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 37552128
+          },
+          "J": {
+            "m_rawValue": 45744128
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 42074112
+          },
+          "J": {
+            "m_rawValue": 44040192
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 46006272
+          },
+          "J": {
+            "m_rawValue": 42467328
+          }
+        }
+      ],
+      "MinOilSupply": {
+        "m_rawValue": 41875931136000
+      },
+      "AvgOilSupply": {
+        "m_rawValue": 150753352089600
+      },
+      "MinGasSupply": {
+        "m_rawValue": 343597383680
+      },
+      "AvgGasSupply": {
+        "m_rawValue": 901943132160
+      },
+      "MinRockAmount": {
+        "m_rawValue": 65536
+      },
+      "AvgRockAmount": {
+        "m_rawValue": 196608
+      },
+      "MinLavaAmount": {
+        "m_rawValue": 65536
+      },
+      "AvgLavaAmount": {
+        "m_rawValue": 131072
+      },
+      "AvgDiamonds": {
+        "m_rawValue": 0
+      },
+      "OilRandomizations": [
+        {
+          "m_rawValue": 39321
+        },
+        {
+          "m_rawValue": 91750
+        },
+        {
+          "m_rawValue": 111411
+        },
+        {
+          "m_rawValue": 39321
+        },
+        {
+          "m_rawValue": 91750
+        },
+        {
+          "m_rawValue": 111411
+        },
+        {
+          "m_rawValue": 39321
+        },
+        {
+          "m_rawValue": 91750
+        },
+        {
+          "m_rawValue": 111411
+        },
+        {
+          "m_rawValue": 39321
+        },
+        {
+          "m_rawValue": 91750
+        },
+        {
+          "m_rawValue": 111411
+        }
+      ],
+      "OilLerpTarget": {
+        "m_rawValue": 150753352089600
+      },
+      "OilLerpFactor": {
+        "m_rawValue": 1073741824
+      },
+      "MinOilClamp": {
+        "m_rawValue": 42949672960000
+      },
+      "MaxOilClamp": {
+        "m_rawValue": 274877906944000
+      },
+      "DesiredTotalOil": {
+        "m_rawValue": 6012954214400000
+      }
+    },
+    {
+      "Province": "volcano",
+      "Vertices": [
+        {
+          "Position": {
+            "I": {
+              "m_rawValue": 52035584
+            },
+            "J": {
+              "m_rawValue": 5242880
+            }
+          },
+          "OilSupply": {
+            "m_rawValue": 0
+          },
+          "GasSupply": {
+            "m_rawValue": 0
+          },
+          "RockAmount": {
+            "m_rawValue": 0
+          },
+          "LavaAmount": {
+            "m_rawValue": 0
+          },
+          "DiamondAttractiveness": {
+            "m_rawValue": 0
+          }
+        },
+        {
+          "Position": {
+            "I": {
+              "m_rawValue": 77266944
+            },
+            "J": {
+              "m_rawValue": 6029312
+            }
+          },
+          "OilSupply": {
+            "m_rawValue": 0
+          },
+          "GasSupply": {
+            "m_rawValue": 0
+          },
+          "RockAmount": {
+            "m_rawValue": 0
+          },
+          "LavaAmount": {
+            "m_rawValue": 0
+          },
+          "DiamondAttractiveness": {
+            "m_rawValue": 0
+          }
+        },
+        {
+          "Position": {
+            "I": {
+              "m_rawValue": 63111168
+            },
+            "J": {
+              "m_rawValue": 31784960
+            }
+          },
+          "OilSupply": {
+            "m_rawValue": 0
+          },
+          "GasSupply": {
+            "m_rawValue": 0
+          },
+          "RockAmount": {
+            "m_rawValue": 0
+          },
+          "LavaAmount": {
+            "m_rawValue": 0
+          },
+          "DiamondAttractiveness": {
+            "m_rawValue": 0
+          }
+        },
+        {
+          "Position": {
+            "I": {
+              "m_rawValue": 45875200
+            },
+            "J": {
+              "m_rawValue": 63045632
+            }
+          },
+          "OilSupply": {
+            "m_rawValue": 0
+          },
+          "GasSupply": {
+            "m_rawValue": 0
+          },
+          "RockAmount": {
+            "m_rawValue": 0
+          },
+          "LavaAmount": {
+            "m_rawValue": 0
+          },
+          "DiamondAttractiveness": {
+            "m_rawValue": 0
+          }
+        },
+        {
+          "Position": {
+            "I": {
+              "m_rawValue": 76808192
+            },
+            "J": {
+              "m_rawValue": 64880640
+            }
+          },
+          "OilSupply": {
+            "m_rawValue": 0
+          },
+          "GasSupply": {
+            "m_rawValue": 0
+          },
+          "RockAmount": {
+            "m_rawValue": 0
+          },
+          "LavaAmount": {
+            "m_rawValue": 0
+          },
+          "DiamondAttractiveness": {
+            "m_rawValue": 0
+          }
+        }
+      ],
+      "TriangleIndices": [
+        0,
+        1,
+        2,
+        0,
+        2,
+        3,
+        2,
+        3,
+        4,
+        1,
+        2,
+        4
+      ],
+      "EstatePositions": [
+        {
+          "I": {
+            "m_rawValue": 69533696
+          },
+          "J": {
+            "m_rawValue": 8454144
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 74645504
+          },
+          "J": {
+            "m_rawValue": 8192000
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 70451200
+          },
+          "J": {
+            "m_rawValue": 11730944
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 74842112
+          },
+          "J": {
+            "m_rawValue": 11468800
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 69926912
+          },
+          "J": {
+            "m_rawValue": 14942208
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 74514432
+          },
+          "J": {
+            "m_rawValue": 14876672
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 66453504
+          },
+          "J": {
+            "m_rawValue": 19660800
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 69926912
+          },
+          "J": {
+            "m_rawValue": 19070976
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 74448896
+          },
+          "J": {
+            "m_rawValue": 18939904
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 65470464
+          },
+          "J": {
+            "m_rawValue": 25296896
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 69730304
+          },
+          "J": {
+            "m_rawValue": 24313856
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 74579968
+          },
+          "J": {
+            "m_rawValue": 24051712
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 65142784
+          },
+          "J": {
+            "m_rawValue": 29687808
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 70057984
+          },
+          "J": {
+            "m_rawValue": 28835840
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 74514432
+          },
+          "J": {
+            "m_rawValue": 28966912
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 63897600
+          },
+          "J": {
+            "m_rawValue": 33751040
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 69337088
+          },
+          "J": {
+            "m_rawValue": 33095680
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 74514432
+          },
+          "J": {
+            "m_rawValue": 33161216
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 65470464
+          },
+          "J": {
+            "m_rawValue": 37289984
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 69730304
+          },
+          "J": {
+            "m_rawValue": 36962304
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 74645504
+          },
+          "J": {
+            "m_rawValue": 37158912
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 70123520
+          },
+          "J": {
+            "m_rawValue": 41680896
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 74645504
+          },
+          "J": {
+            "m_rawValue": 41746432
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 59703296
+          },
+          "J": {
+            "m_rawValue": 46661632
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 64684032
+          },
+          "J": {
+            "m_rawValue": 46661632
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 69664768
+          },
+          "J": {
+            "m_rawValue": 46661632
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 74383360
+          },
+          "J": {
+            "m_rawValue": 46792704
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 59834368
+          },
+          "J": {
+            "m_rawValue": 51183616
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 64684032
+          },
+          "J": {
+            "m_rawValue": 51380224
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 69861376
+          },
+          "J": {
+            "m_rawValue": 51380224
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 74514432
+          },
+          "J": {
+            "m_rawValue": 51511296
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 60030976
+          },
+          "J": {
+            "m_rawValue": 56295424
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 65339392
+          },
+          "J": {
+            "m_rawValue": 56360960
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 70582272
+          },
+          "J": {
+            "m_rawValue": 56295424
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 74907648
+          },
+          "J": {
+            "m_rawValue": 56098816
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 49217536
+          },
+          "J": {
+            "m_rawValue": 61341696
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 55443456
+          },
+          "J": {
+            "m_rawValue": 61014016
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 62455808
+          },
+          "J": {
+            "m_rawValue": 61014016
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 68943872
+          },
+          "J": {
+            "m_rawValue": 61603840
+          }
+        },
+        {
+          "I": {
+            "m_rawValue": 74645504
+          },
+          "J": {
+            "m_rawValue": 60882944
+          }
+        }
+      ],
+      "MinOilSupply": {
+        "m_rawValue": 85899345920000
+      },
+      "AvgOilSupply": {
+        "m_rawValue": 161920267059200
+      },
+      "MinGasSupply": {
+        "m_rawValue": 0
+      },
+      "AvgGasSupply": {
+        "m_rawValue": 0
+      },
+      "MinRockAmount": {
+        "m_rawValue": 262144
+      },
+      "AvgRockAmount": {
+        "m_rawValue": 589824
+      },
+      "MinLavaAmount": {
+        "m_rawValue": 65536
+      },
+      "AvgLavaAmount": {
+        "m_rawValue": 131072
+      },
+      "AvgDiamonds": {
+        "m_rawValue": 0
+      },
+      "OilRandomizations": [
+        {
+          "m_rawValue": 39321
+        },
+        {
+          "m_rawValue": 91750
+        },
+        {
+          "m_rawValue": 111411
+        },
+        {
+          "m_rawValue": 39321
+        },
+        {
+          "m_rawValue": 91750
+        },
+        {
+          "m_rawValue": 111411
+        },
+        {
+          "m_rawValue": 39321
+        },
+        {
+          "m_rawValue": 91750
+        },
+        {
+          "m_rawValue": 111411
+        },
+        {
+          "m_rawValue": 39321
+        },
+        {
+          "m_rawValue": 91750
+        },
+        {
+          "m_rawValue": 111411
+        }
+      ],
+      "OilLerpTarget": {
+        "m_rawValue": 161920267059200
+      },
+      "OilLerpFactor": {
+        "m_rawValue": 644245094
+      },
+      "MinOilClamp": {
+        "m_rawValue": 85899345920000
+      },
+      "MaxOilClamp": {
+        "m_rawValue": 343597383680000
+      },
+      "DesiredTotalOil": {
+        "m_rawValue": 7730941132800000
+      }
+    }
+  ],
+  "BonusIslandInput": {
+    "Seed": 0,
+    "Empty": false,
+    "StartingMoney": 2000,
+    "OilSupply": 195000,
+    "GasSupply": 2000,
+    "RockAmount": 3,
+    "LavaAmount": 0,
+    "HasDiamond": false,
+    "Artifact": null,
+    "BonusOilWell": false,
+    "Province": "island_dlc"
+  },
+  "BonusIslandProvince": "island_dlc",
+  "BonusIslandLocation": {
+    "I": {
+      "m_rawValue": 39387136
+    },
+    "J": {
+      "m_rawValue": 57081856
+    }
+  },
+  "ShouldGiftBonusIslandWhenWon": false,
+  "Tenants": [
+    {
+      "Name": "guy1",
+      "Guy": null,
+      "LevelConfigModifiers": null
+    },
+    {
+      "Name": "guy2",
+      "Guy": null,
+      "LevelConfigModifiers": null
+    },
+    {
+      "Name": "guy3",
+      "Guy": null,
+      "LevelConfigModifiers": null
+    },
+    {
+      "Name": "guy4",
+      "Guy": null,
+      "LevelConfigModifiers": null
+    }
+  ],
+  "Guys": [
+    {
+      "Name": "blanche",
+      "Color": null
+    },
+    {
+      "Name": "joshua",
+      "Color": null
+    },
+    {
+      "Name": "daisy",
+      "Color": null
+    },
+    {
+      "Name": "ricardo",
+      "Color": null
+    },
+    {
+      "Name": "mayor",
+      "Color": null
+    },
+    {
+      "Name": "fred",
+      "Color": null
+    },
+    {
+      "Name": "onno",
+      "Color": null
+    },
+    {
+      "Name": "kyle",
+      "Color": null
+    },
+    {
+      "Name": "william",
+      "Color": null
+    },
+    {
+      "Name": "daphne",
+      "Color": null
+    },
+    {
+      "Name": "edward",
+      "Color": null
+    },
+    {
+      "Name": "raynor",
+      "Color": null
+    },
+    {
+      "Name": "mayor2",
+      "Color": null
+    },
+    {
+      "Name": "jack",
+      "Color": null
+    },
+    {
+      "Name": "maeve",
+      "Color": null
+    },
+    {
+      "Name": "anthony",
+      "Color": null
+    }
+  ],
+  "Buildings": [
+    {
+      "Name": "townhall",
+      "Guy": "mayor2",
+      "Occasion": 1,
+      "ConstructionLocalization": "narrative_iab_townhall",
+      "IntroductionLocalization": "narrative_new_townhall",
+      "WelcomeLocalization": "narrative_welcome_townhall",
+      "NameLocalization": "townhall",
+      "LostLocalization": "narrative_welcome_townhall_loser",
+      "WonLocalization": "narrative_welcome_townhall_winner",
+      "AfterIslandLocalization": "narrative_welcome_townhall_afterisland"
+    },
+    {
+      "Name": "bank",
+      "Guy": "william",
+      "Occasion": 1,
+      "ConstructionLocalization": "narrative_iab_bank",
+      "IntroductionLocalization": "narrative_new_bank",
+      "WelcomeLocalization": "narrative_welcome_bank",
+      "NameLocalization": "bank",
+      "LostLocalization": "narrative_welcome_bank_loser",
+      "WonLocalization": "narrative_welcome_bank_winner",
+      "AfterIslandLocalization": "narrative_welcome_bank_afterisland"
+    },
+    {
+      "Name": "factory",
+      "Guy": "fred",
+      "Occasion": 1,
+      "ConstructionLocalization": "narrative_iab_factory",
+      "IntroductionLocalization": "narrative_new_factory",
+      "WelcomeLocalization": "narrative_welcome_factory",
+      "NameLocalization": "factory",
+      "LostLocalization": "narrative_welcome_factory_loser",
+      "WonLocalization": "narrative_welcome_factory_winner",
+      "AfterIslandLocalization": "narrative_welcome_factory_afterisland"
+    },
+    {
+      "Name": "workshop",
+      "Guy": "edward",
+      "Occasion": 1,
+      "ConstructionLocalization": "narrative_iab_workshop",
+      "IntroductionLocalization": "narrative_new_workshop",
+      "WelcomeLocalization": "narrative_welcome_workshop",
+      "NameLocalization": "workshop",
+      "LostLocalization": "narrative_welcome_workshop_loser",
+      "WonLocalization": "narrative_welcome_workshop_winner",
+      "AfterIslandLocalization": "narrative_welcome_workshop_afterisland"
+    },
+    {
+      "Name": "stable",
+      "Guy": "raynor",
+      "Occasion": 1,
+      "ConstructionLocalization": "narrative_iab_stable",
+      "IntroductionLocalization": "narrative_new_stable",
+      "WelcomeLocalization": "narrative_welcome_stable",
+      "NameLocalization": "stable",
+      "LostLocalization": "narrative_welcome_stable_loser",
+      "WonLocalization": "narrative_welcome_stable_winner",
+      "AfterIslandLocalization": "narrative_welcome_stable_afterisland"
+    },
+    {
+      "Name": "saloon2",
+      "Guy": "maeve",
+      "Occasion": 3,
+      "ConstructionLocalization": "narrative_iab_saloon2",
+      "IntroductionLocalization": "narrative_new_saloon2",
+      "WelcomeLocalization": "narrative_welcome_saloon2",
+      "NameLocalization": "saloon2",
+      "LostLocalization": "narrative_welcome_saloon2_loser",
+      "WonLocalization": "narrative_welcome_saloon2_winner",
+      "AfterIslandLocalization": "narrative_welcome_saloon2_afterisland"
+    },
+    {
+      "Name": "shed",
+      "Guy": "jack",
+      "Occasion": 2,
+      "ConstructionLocalization": "narrative_iab_shed",
+      "IntroductionLocalization": "narrative_new_shed",
+      "WelcomeLocalization": "narrative_welcome_shed",
+      "NameLocalization": "shed",
+      "LostLocalization": "narrative_welcome_shed_loser",
+      "WonLocalization": "narrative_welcome_shed_winner",
+      "AfterIslandLocalization": "narrative_welcome_shed_afterisland"
+    },
+    {
+      "Name": "underground",
+      "Guy": "anthony",
+      "Occasion": 4,
+      "ConstructionLocalization": "narrative_iab_underground",
+      "IntroductionLocalization": "narrative_new_underground",
+      "WelcomeLocalization": "narrative_welcome_underground",
+      "NameLocalization": "underground",
+      "LostLocalization": "narrative_welcome_underground_loser",
+      "WonLocalization": "narrative_welcome_underground_winner",
+      "AfterIslandLocalization": "narrative_welcome_underground_afterisland"
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "pipe_2",
+      "Price": 7500,
+      "Building": "factory",
+      "UpgradeRequirements": [
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "settier",
+          "Name": "PipeUnitPrice",
+          "Value": {
+            "m_rawValue": 131072
+          },
+          "Tier": 1
+        },
+        {
+          "Type": "settier",
+          "Name": "PipeOilTransfer",
+          "Value": {
+            "m_rawValue": 2300313
+          },
+          "Tier": 1
+        },
+        {
+          "Type": "settier",
+          "Name": "PipeGasTransfer",
+          "Value": {
+            "m_rawValue": 1114112
+          },
+          "Tier": 1
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilMinedFactorAdd",
+          "Value": {
+            "m_rawValue": 1769
+          },
+          "Tier": 0
+        },
+        {
+          "Type": "additive",
+          "Name": "UpgradedPipesMin",
+          "Value": {
+            "m_rawValue": 45875200
+          },
+          "Tier": 0
+        },
+        {
+          "Type": "additive",
+          "Name": "UpgradedPipesMax",
+          "Value": {
+            "m_rawValue": 78643200
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_pipe_2",
+      "NameLocalization": "invention_name_pipe_2",
+      "DescriptionLocalization": "invention_text_pipe_2"
+    },
+    {
+      "Name": "pipe_3",
+      "Price": 15000,
+      "Building": "factory",
+      "UpgradeRequirements": [
+        "pipe_2"
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "settier",
+          "Name": "PipeUnitPrice",
+          "Value": {
+            "m_rawValue": 131072
+          },
+          "Tier": 2
+        },
+        {
+          "Type": "settier",
+          "Name": "PipeOilTransfer",
+          "Value": {
+            "m_rawValue": 5111808
+          },
+          "Tier": 2
+        },
+        {
+          "Type": "settier",
+          "Name": "PipeGasTransfer",
+          "Value": {
+            "m_rawValue": 1638400
+          },
+          "Tier": 2
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilMinedFactorAdd",
+          "Value": {
+            "m_rawValue": 1769
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_pipe_3",
+      "NameLocalization": "invention_name_pipe_3",
+      "DescriptionLocalization": "invention_text_pipe_3"
+    },
+    {
+      "Name": "silo_2",
+      "Price": 7500,
+      "Building": "factory",
+      "UpgradeRequirements": [
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "settier",
+          "Name": "SiloPrice",
+          "Value": {
+            "m_rawValue": 6553600
+          },
+          "Tier": 1
+        },
+        {
+          "Type": "settier",
+          "Name": "SiloOilStorage",
+          "Value": {
+            "m_rawValue": 174653440
+          },
+          "Tier": 1
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilSoldFactorAdd",
+          "Value": {
+            "m_rawValue": 2949
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_silo_2",
+      "NameLocalization": "invention_name_silo_2",
+      "DescriptionLocalization": "invention_text_silo_2"
+    },
+    {
+      "Name": "silo_3",
+      "Price": 15000,
+      "Building": "factory",
+      "UpgradeRequirements": [
+        "silo_2"
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "settier",
+          "Name": "SiloPrice",
+          "Value": {
+            "m_rawValue": 6553600
+          },
+          "Tier": 2
+        },
+        {
+          "Type": "settier",
+          "Name": "SiloOilStorage",
+          "Value": {
+            "m_rawValue": 221511680
+          },
+          "Tier": 2
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilSoldFactorAdd",
+          "Value": {
+            "m_rawValue": 2949
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_silo_3",
+      "NameLocalization": "invention_name_silo_3",
+      "DescriptionLocalization": "invention_text_silo_3"
+    },
+    {
+      "Name": "rig_timer_2",
+      "Price": 20000,
+      "Building": "factory",
+      "UpgradeRequirements": [
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "RigTimer",
+          "Value": {
+            "m_rawValue": 176947
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilMinedFactorAdd",
+          "Value": {
+            "m_rawValue": 1769
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_rig_timer_2",
+      "NameLocalization": "invention_name_rig_timer_2",
+      "DescriptionLocalization": "invention_text_rig_timer_2"
+    },
+    {
+      "Name": "rig_timer_3",
+      "Price": 30000,
+      "Building": "factory",
+      "UpgradeRequirements": [
+        "rig_timer_2"
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "RigTimer",
+          "Value": {
+            "m_rawValue": 242483
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilMinedFactorAdd",
+          "Value": {
+            "m_rawValue": 1769
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_rig_timer_3",
+      "NameLocalization": "invention_name_rig_timer_3",
+      "DescriptionLocalization": "invention_text_rig_timer_3"
+    },
+    {
+      "Name": "branch_2",
+      "Price": 12500,
+      "Building": "factory",
+      "UpgradeRequirements": [
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "ElbowMaxBranch",
+          "Value": {
+            "m_rawValue": 65536
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilMinedFactorAdd",
+          "Value": {
+            "m_rawValue": 1769
+          },
+          "Tier": 0
+        },
+        {
+          "Type": "multiplier",
+          "Name": "PipesModifier",
+          "Value": {
+            "m_rawValue": 45875
+          },
+          "Tier": 0
+        },
+        {
+          "Type": "multiplier",
+          "Name": "UpgradedPipesModifier",
+          "Value": {
+            "m_rawValue": 55705
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_branch_2",
+      "NameLocalization": "invention_name_branch_2",
+      "DescriptionLocalization": "invention_text_branch_2"
+    },
+    {
+      "Name": "branch_3",
+      "Price": 25000,
+      "Building": "factory",
+      "UpgradeRequirements": [
+        "branch_2"
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "ElbowMaxBranch",
+          "Value": {
+            "m_rawValue": 131072
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilMinedFactorAdd",
+          "Value": {
+            "m_rawValue": 1769
+          },
+          "Tier": 0
+        },
+        {
+          "Type": "multiplier",
+          "Name": "PipesModifier",
+          "Value": {
+            "m_rawValue": 45875
+          },
+          "Tier": 0
+        },
+        {
+          "Type": "multiplier",
+          "Name": "UpgradedPipesModifier",
+          "Value": {
+            "m_rawValue": 55705
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_branch_3",
+      "NameLocalization": "invention_name_branch_3",
+      "DescriptionLocalization": "invention_text_branch_3"
+    },
+    {
+      "Name": "dowser_depth_2",
+      "Price": 7500,
+      "Building": "workshop",
+      "UpgradeRequirements": [
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "DowserMaxSearchDepthFactor",
+          "Value": {
+            "m_rawValue": 15728
+          },
+          "Tier": 2
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilFoundFactorAdd",
+          "Value": {
+            "m_rawValue": 1179
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_dowser_depth_2",
+      "NameLocalization": "invention_name_dowser_depth_2",
+      "DescriptionLocalization": "invention_text_dowser_depth_2"
+    },
+    {
+      "Name": "dowser_depth_3",
+      "Price": 15000,
+      "Building": "workshop",
+      "UpgradeRequirements": [
+        "dowser_depth_2"
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "DowserMaxSearchDepthFactor",
+          "Value": {
+            "m_rawValue": 15728
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilFoundFactorAdd",
+          "Value": {
+            "m_rawValue": 1179
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_dowser_depth_3",
+      "NameLocalization": "invention_name_dowser_depth_3",
+      "DescriptionLocalization": "invention_text_dowser_depth_3"
+    },
+    {
+      "Name": "dowser_speed_2",
+      "Price": 7500,
+      "Building": "workshop",
+      "UpgradeRequirements": [
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "DowserSpeed",
+          "Value": {
+            "m_rawValue": 1179648
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilFoundFactorAdd",
+          "Value": {
+            "m_rawValue": 1179
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_dowser_speed_2",
+      "NameLocalization": "invention_name_dowser_speed_2",
+      "DescriptionLocalization": "invention_text_dowser_speed_2"
+    },
+    {
+      "Name": "dowser_speed_3",
+      "Price": 15000,
+      "Building": "workshop",
+      "UpgradeRequirements": [
+        "dowser_speed_2"
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "DowserSpeed",
+          "Value": {
+            "m_rawValue": 1179648
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilFoundFactorAdd",
+          "Value": {
+            "m_rawValue": 1179
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_dowser_speed_3",
+      "NameLocalization": "invention_name_dowser_speed_3",
+      "DescriptionLocalization": "invention_text_dowser_speed_3"
+    },
+    {
+      "Name": "mole",
+      "Price": 10000,
+      "Building": "workshop",
+      "UpgradeRequirements": [
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "replacement",
+          "Name": "MolePrice",
+          "Value": {
+            "m_rawValue": 6553600
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilFoundFactorAdd",
+          "Value": {
+            "m_rawValue": 1179
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_mole",
+      "NameLocalization": "invention_name_mole",
+      "DescriptionLocalization": "invention_text_mole"
+    },
+    {
+      "Name": "mole_cells_2",
+      "Price": 10000,
+      "Building": "workshop",
+      "UpgradeRequirements": [
+        "mole"
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "MoleCells",
+          "Value": {
+            "m_rawValue": 196608
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "GasFoundFactorAdd",
+          "Value": {
+            "m_rawValue": 1638
+          },
+          "Tier": 0
+        },
+        {
+          "Type": "additive",
+          "Name": "OilFoundFactorAdd",
+          "Value": {
+            "m_rawValue": 1179
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_mole_cells_2",
+      "NameLocalization": "invention_name_mole_cells_2",
+      "DescriptionLocalization": "invention_text_mole_cells_2"
+    },
+    {
+      "Name": "mole_cells_3",
+      "Price": 20000,
+      "Building": "workshop",
+      "UpgradeRequirements": [
+        "mole_cells_2"
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "MoleCells",
+          "Value": {
+            "m_rawValue": 196608
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "GasFoundFactorAdd",
+          "Value": {
+            "m_rawValue": 1638
+          },
+          "Tier": 0
+        },
+        {
+          "Type": "additive",
+          "Name": "OilFoundFactorAdd",
+          "Value": {
+            "m_rawValue": 1179
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_mole_cells_3",
+      "NameLocalization": "invention_name_mole_cells_3",
+      "DescriptionLocalization": "invention_text_mole_cells_3"
+    },
+    {
+      "Name": "mole_speed_2",
+      "Price": 10000,
+      "Building": "workshop",
+      "UpgradeRequirements": [
+        "mole"
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "MoleSpeed",
+          "Value": {
+            "m_rawValue": 491520
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "GasFoundFactorAdd",
+          "Value": {
+            "m_rawValue": 1638
+          },
+          "Tier": 0
+        },
+        {
+          "Type": "additive",
+          "Name": "OilFoundFactorAdd",
+          "Value": {
+            "m_rawValue": 1179
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_mole_speed_2",
+      "NameLocalization": "invention_name_mole_speed_2",
+      "DescriptionLocalization": "invention_text_mole_speed_2"
+    },
+    {
+      "Name": "mole_speed_3",
+      "Price": 20000,
+      "Building": "workshop",
+      "UpgradeRequirements": [
+        "mole_speed_2"
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "MoleSpeed",
+          "Value": {
+            "m_rawValue": 491520
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "GasFoundFactorAdd",
+          "Value": {
+            "m_rawValue": 1638
+          },
+          "Tier": 0
+        },
+        {
+          "Type": "additive",
+          "Name": "OilFoundFactorAdd",
+          "Value": {
+            "m_rawValue": 1179
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_mole_speed_3",
+      "NameLocalization": "invention_name_mole_speed_3",
+      "DescriptionLocalization": "invention_text_mole_speed_3"
+    },
+    {
+      "Name": "scanner",
+      "Price": 25000,
+      "Building": "workshop",
+      "UpgradeRequirements": [
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "replacement",
+          "Name": "ScannerBasePrice",
+          "Value": {
+            "m_rawValue": 6553600
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "GasFoundFactorAdd",
+          "Value": {
+            "m_rawValue": 2097
+          },
+          "Tier": 0
+        },
+        {
+          "Type": "additive",
+          "Name": "OilFoundFactorAdd",
+          "Value": {
+            "m_rawValue": 1572
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_scanner",
+      "NameLocalization": "invention_name_scanner",
+      "DescriptionLocalization": "invention_text_scanner"
+    },
+    {
+      "Name": "scanner_size_2",
+      "Price": 15000,
+      "Building": "workshop",
+      "UpgradeRequirements": [
+        "scanner"
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "ScannerMaxRadius",
+          "Value": {
+            "m_rawValue": 4263772
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "GasFoundFactorAdd",
+          "Value": {
+            "m_rawValue": 2097
+          },
+          "Tier": 0
+        },
+        {
+          "Type": "additive",
+          "Name": "OilFoundFactorAdd",
+          "Value": {
+            "m_rawValue": 1572
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_scanner_size_2",
+      "NameLocalization": "invention_name_scanner_size_2",
+      "DescriptionLocalization": "invention_text_scanner_size_2"
+    },
+    {
+      "Name": "scanner_size_3",
+      "Price": 15000,
+      "Building": "workshop",
+      "UpgradeRequirements": [
+        "scanner_size_2"
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "replacement",
+          "Name": "ScannerMaxRadius",
+          "Value": {
+            "m_rawValue": 52428800
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "GasFoundFactorAdd",
+          "Value": {
+            "m_rawValue": 2097
+          },
+          "Tier": 0
+        },
+        {
+          "Type": "additive",
+          "Name": "OilFoundFactorAdd",
+          "Value": {
+            "m_rawValue": 1572
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_scanner_size_3",
+      "NameLocalization": "invention_name_scanner_size_3",
+      "DescriptionLocalization": "invention_text_scanner_size_3"
+    },
+    {
+      "Name": "wagon_counter",
+      "Price": 5000,
+      "Building": "stable",
+      "UpgradeRequirements": [
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "replacement",
+          "Name": "WagonShowCounter",
+          "Value": {
+            "m_rawValue": 65536
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilSalePriceAdd",
+          "Value": {
+            "m_rawValue": 917
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_wagon_counter",
+      "NameLocalization": "invention_name_wagon_counter",
+      "DescriptionLocalization": "invention_text_wagon_counter"
+    },
+    {
+      "Name": "wagon_2",
+      "Price": 15000,
+      "Building": "stable",
+      "UpgradeRequirements": [
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "settier",
+          "Name": "WagonUpgradePrice",
+          "Value": {
+            "m_rawValue": 49152000
+          },
+          "Tier": 0
+        },
+        {
+          "Type": "settier",
+          "Name": "WagonTransfer",
+          "Value": {
+            "m_rawValue": 8690073
+          },
+          "Tier": 1
+        },
+        {
+          "Type": "settier",
+          "Name": "WagonOilStorage",
+          "Value": {
+            "m_rawValue": 19169280
+          },
+          "Tier": 1
+        },
+        {
+          "Type": "settier",
+          "Name": "WagonMaxSpeed",
+          "Value": {
+            "m_rawValue": 3932160
+          },
+          "Tier": 1
+        },
+        {
+          "Type": "settier",
+          "Name": "WagonAcceleration",
+          "Value": {
+            "m_rawValue": 6488064
+          },
+          "Tier": 1
+        },
+        {
+          "Type": "settier",
+          "Name": "WagonDeceleration",
+          "Value": {
+            "m_rawValue": 29491200
+          },
+          "Tier": 1
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilSalePriceAdd",
+          "Value": {
+            "m_rawValue": 1966
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_wagon_2",
+      "NameLocalization": "invention_name_wagon_2",
+      "DescriptionLocalization": "invention_text_wagon_2"
+    },
+    {
+      "Name": "wagon_3",
+      "Price": 25000,
+      "Building": "stable",
+      "UpgradeRequirements": [
+        "wagon_2"
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "settier",
+          "Name": "WagonUpgradePrice",
+          "Value": {
+            "m_rawValue": 65536000
+          },
+          "Tier": 1
+        },
+        {
+          "Type": "settier",
+          "Name": "WagonTransfer",
+          "Value": {
+            "m_rawValue": 8690073
+          },
+          "Tier": 2
+        },
+        {
+          "Type": "settier",
+          "Name": "WagonOilStorage",
+          "Value": {
+            "m_rawValue": 19169280
+          },
+          "Tier": 2
+        },
+        {
+          "Type": "settier",
+          "Name": "WagonMaxSpeed",
+          "Value": {
+            "m_rawValue": 6291456
+          },
+          "Tier": 2
+        },
+        {
+          "Type": "settier",
+          "Name": "WagonAcceleration",
+          "Value": {
+            "m_rawValue": 11796480
+          },
+          "Tier": 2
+        },
+        {
+          "Type": "settier",
+          "Name": "WagonDeceleration",
+          "Value": {
+            "m_rawValue": 41287680
+          },
+          "Tier": 2
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilSalePriceAdd",
+          "Value": {
+            "m_rawValue": 1966
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_wagon_3",
+      "NameLocalization": "invention_name_wagon_3",
+      "DescriptionLocalization": "invention_text_wagon_3"
+    },
+    {
+      "Name": "wagon_herd_2",
+      "Price": 15000,
+      "Building": "stable",
+      "UpgradeRequirements": [
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "WagonHerd",
+          "Value": {
+            "m_rawValue": 655360
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilSalePriceAdd",
+          "Value": {
+            "m_rawValue": 1966
+          },
+          "Tier": 0
+        },
+        {
+          "Type": "additive",
+          "Name": "WagonsMin",
+          "Value": {
+            "m_rawValue": 327680
+          },
+          "Tier": 0
+        },
+        {
+          "Type": "additive",
+          "Name": "WagonsMax",
+          "Value": {
+            "m_rawValue": 655360
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_wagon_herd_2",
+      "NameLocalization": "invention_name_wagon_herd_2",
+      "DescriptionLocalization": "invention_text_wagon_herd_2"
+    },
+    {
+      "Name": "wagon_herd_3",
+      "Price": 30000,
+      "Building": "stable",
+      "UpgradeRequirements": [
+        "wagon_herd_2"
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "WagonHerd",
+          "Value": {
+            "m_rawValue": 983040
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilSalePriceAdd",
+          "Value": {
+            "m_rawValue": 1966
+          },
+          "Tier": 0
+        },
+        {
+          "Type": "additive",
+          "Name": "WagonsMin",
+          "Value": {
+            "m_rawValue": 327680
+          },
+          "Tier": 0
+        },
+        {
+          "Type": "additive",
+          "Name": "WagonsMax",
+          "Value": {
+            "m_rawValue": 983040
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_wagon_herd_3",
+      "NameLocalization": "invention_name_wagon_herd_3",
+      "DescriptionLocalization": "invention_text_wagon_herd_3"
+    },
+    {
+      "Name": "rig_speed_2",
+      "Price": 15000,
+      "Building": "factory",
+      "UpgradeRequirements": [
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "settier",
+          "Name": "RigSpeedPrice",
+          "Value": {
+            "m_rawValue": 32768000
+          },
+          "Tier": 0
+        },
+        {
+          "Type": "settier",
+          "Name": "PipeDrillSpeed",
+          "Value": {
+            "m_rawValue": 1032192
+          },
+          "Tier": 1
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilMinedFactorAdd",
+          "Value": {
+            "m_rawValue": 1769
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_rig_speed_2",
+      "NameLocalization": "invention_name_rig_speed_2",
+      "DescriptionLocalization": "invention_text_rig_speed_2"
+    },
+    {
+      "Name": "rig_speed_3",
+      "Price": 30000,
+      "Building": "factory",
+      "UpgradeRequirements": [
+        "rig_speed_2"
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "settier",
+          "Name": "RigSpeedPrice",
+          "Value": {
+            "m_rawValue": 49152000
+          },
+          "Tier": 1
+        },
+        {
+          "Type": "settier",
+          "Name": "PipeDrillSpeed",
+          "Value": {
+            "m_rawValue": 1769472
+          },
+          "Tier": 2
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilMinedFactorAdd",
+          "Value": {
+            "m_rawValue": 1769
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_rig_speed_3",
+      "NameLocalization": "invention_name_rig_speed_3",
+      "DescriptionLocalization": "invention_text_rig_speed_3"
+    },
+    {
+      "Name": "rig_rocks",
+      "Price": 30000,
+      "Building": "factory",
+      "UpgradeRequirements": [
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "replacement",
+          "Name": "RigDrillPrice",
+          "Value": {
+            "m_rawValue": 49152000
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilMinedFactorAdd",
+          "Value": {
+            "m_rawValue": 1769
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_rig_rocks",
+      "NameLocalization": "invention_name_rig_rocks",
+      "DescriptionLocalization": "invention_text_rig_rocks"
+    },
+    {
+      "Name": "supersilo",
+      "Price": 35000,
+      "Building": "factory",
+      "UpgradeRequirements": [
+        "silo_3"
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "replacement",
+          "Name": "SuperSiloPrice",
+          "Value": {
+            "m_rawValue": 49152000
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilSoldFactorAdd",
+          "Value": {
+            "m_rawValue": 3932
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_supersilo",
+      "NameLocalization": "invention_name_supersilo",
+      "DescriptionLocalization": "invention_text_supersilo"
+    },
+    {
+      "Name": "mole_gas",
+      "Price": 15000,
+      "Building": "workshop",
+      "UpgradeRequirements": [
+        "mole"
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "replacement",
+          "Name": "MoleGasRadiusSquared",
+          "Value": {
+            "m_rawValue": 115605504
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "GasFoundFactorAdd",
+          "Value": {
+            "m_rawValue": 6553
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 1,
+      "IntroductionLocalization": "introduce_upgrade_mole_gas",
+      "NameLocalization": "invention_name_mole_gas",
+      "DescriptionLocalization": "invention_text_mole_gas"
+    },
+    {
+      "Name": "mole_artefact",
+      "Price": 10000,
+      "Building": "workshop",
+      "UpgradeRequirements": [
+        "mole"
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "replacement",
+          "Name": "MolePickupArtifact",
+          "Value": {
+            "m_rawValue": 65536
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": null,
+      "AIPriority": 0,
+      "Occasion": 4,
+      "IntroductionLocalization": "introduce_upgrade_mole_artefact",
+      "NameLocalization": "invention_name_mole_artefact",
+      "DescriptionLocalization": "invention_text_mole_artefact"
+    },
+    {
+      "Name": "mole_lava",
+      "Price": 10000,
+      "Building": "workshop",
+      "UpgradeRequirements": [
+        "mole"
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "replacement",
+          "Name": "MoleLavaRadiusSquared",
+          "Value": {
+            "m_rawValue": 115605504
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": null,
+      "AIPriority": 0,
+      "Occasion": 3,
+      "IntroductionLocalization": "introduce_upgrade_mole_lava",
+      "NameLocalization": "invention_name_mole_lava",
+      "DescriptionLocalization": "invention_text_mole_lava"
+    },
+    {
+      "Name": "heat_resistance_1",
+      "Price": 30000,
+      "Building": "shed",
+      "UpgradeRequirements": [
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "replacement",
+          "Name": "HeatResistance",
+          "Value": {
+            "m_rawValue": 65536
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": null,
+      "AIPriority": 0,
+      "Occasion": 2,
+      "IntroductionLocalization": "introduce_upgrade_heat_resistance_1",
+      "NameLocalization": "invention_name_heat_resistance_1",
+      "DescriptionLocalization": "invention_text_heat_resistance_1"
+    },
+    {
+      "Name": "heat_resistance_2",
+      "Price": 20000,
+      "Building": "shed",
+      "UpgradeRequirements": [
+        "heat_resistance_1"
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "replacement",
+          "Name": "ElbowLavaHeat",
+          "Value": {
+            "m_rawValue": 229376
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilMinedFactorAdd",
+          "Value": {
+            "m_rawValue": 983
+          },
+          "Tier": 0
+        },
+        {
+          "Type": "additive",
+          "Name": "PipesAdd",
+          "Value": {
+            "m_rawValue": 9830400
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 2,
+      "IntroductionLocalization": "introduce_upgrade_heat_resistance_2",
+      "NameLocalization": "invention_name_heat_resistance_2",
+      "DescriptionLocalization": "invention_text_heat_resistance_2"
+    },
+    {
+      "Name": "heat_growth_1",
+      "Price": 40000,
+      "Building": "shed",
+      "UpgradeRequirements": [
+        "heat_resistance_2"
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "HeatGasGrowth",
+          "Value": {
+            "m_rawValue": 137625
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "GasGrowthFactor",
+          "Value": {
+            "m_rawValue": 13107
+          },
+          "Tier": 0
+        },
+        {
+          "Type": "additive",
+          "Name": "GasGrowthBase",
+          "Value": {
+            "m_rawValue": 9175040
+          },
+          "Tier": 0
+        },
+        {
+          "Type": "additive",
+          "Name": "ElbowWrapTimes",
+          "Value": {
+            "m_rawValue": 262144
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 11,
+      "IntroductionLocalization": "introduce_upgrade_heat_growth_1",
+      "NameLocalization": "invention_name_heat_growth_1",
+      "DescriptionLocalization": "invention_text_heat_growth_1"
+    },
+    {
+      "Name": "heat_growth_2",
+      "Price": 25000,
+      "Building": "shed",
+      "UpgradeRequirements": [
+        "heat_growth_1"
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "HeatGasGrowth",
+          "Value": {
+            "m_rawValue": 39321
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "GasGrowthFactor",
+          "Value": {
+            "m_rawValue": 13107
+          },
+          "Tier": 0
+        },
+        {
+          "Type": "additive",
+          "Name": "GasGrowthBase",
+          "Value": {
+            "m_rawValue": 9175040
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 11,
+      "IntroductionLocalization": "introduce_upgrade_heat_growth_2",
+      "NameLocalization": "invention_name_heat_growth_2",
+      "DescriptionLocalization": "invention_text_heat_growth_2"
+    },
+    {
+      "Name": "heat_conversion_1",
+      "Price": 45000,
+      "Building": "shed",
+      "UpgradeRequirements": [
+        "heat_resistance_2"
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "HeatConversionAmount",
+          "Value": {
+            "m_rawValue": 262144
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilConversion",
+          "Value": {
+            "m_rawValue": 1966
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 21,
+      "IntroductionLocalization": "introduce_upgrade_heat_conversion_1",
+      "NameLocalization": "invention_name_heat_conversion_1",
+      "DescriptionLocalization": "invention_text_heat_conversion_1"
+    },
+    {
+      "Name": "heat_conversion_2",
+      "Price": 30000,
+      "Building": "shed",
+      "UpgradeRequirements": [
+        "heat_conversion_1"
+      ],
+      "LevelConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "HeatConversionDelay",
+          "Value": {
+            "m_rawValue": -13107
+          },
+          "Tier": 0
+        }
+      ],
+      "AIConfigModifiers": [
+        {
+          "Type": "additive",
+          "Name": "OilConversion",
+          "Value": {
+            "m_rawValue": 1966
+          },
+          "Tier": 0
+        }
+      ],
+      "AIPriority": 0,
+      "Occasion": 21,
+      "IntroductionLocalization": "introduce_upgrade_heat_conversion_2",
+      "NameLocalization": "invention_name_heat_conversion_2",
+      "DescriptionLocalization": "invention_text_heat_conversion_2"
+    }
+  ],
+  "SkippedUpgradeTutorials": [
+    "pipe_2",
+    "pipe_3",
+    "silo_2",
+    "silo_3",
+    "rig_timer_2",
+    "rig_timer_3",
+    "branch_2",
+    "branch_3",
+    "dowser_depth_2",
+    "dowser_depth_3",
+    "dowser_speed_2",
+    "dowser_speed_3",
+    "mole",
+    "mole_cells_2",
+    "mole_cells_3",
+    "mole_speed_2",
+    "mole_speed_3",
+    "scanner",
+    "scanner_size_2",
+    "scanner_size_3",
+    "wagon_counter",
+    "wagon_2",
+    "wagon_3",
+    "wagon_herd_2",
+    "wagon_herd_3",
+    "rig_rocks",
+    "supersilo",
+    "elbow_thermal",
+    "elbow_thermal_2",
+    "elbow_thermal_3",
+    "elbow_left",
+    "elbow_right",
+    "mole_gas",
+    "mole_diamond",
+    "rig_speed_2",
+    "rig_speed_3"
+  ],
+  "StockExchange": null,
+  "StockGeneratorConfig": {
+    "Type": "Tiered",
+    "FirstLevel": 0,
+    "TierSizes": [
+      15,
+      11,
+      3,
+      1
+    ],
+    "StockAmounts": [
+      0,
+      5,
+      10,
+      15
+    ]
+  },
+  "SaloonOffers": [
+    {
+      "Localization": "offer_saloon_left",
+      "Name": "offer_saloon_left",
+      "Guy": "kyle",
+      "Chance": {
+        "m_rawValue": 49152
+      },
+      "AreaPriceModifiers": null,
+      "MinPrices": [
+        {
+          "m_rawValue": 32768000
+        },
+        {
+          "m_rawValue": 65536000
+        },
+        {
+          "m_rawValue": 117964800
+        },
+        {
+          "m_rawValue": 196608000
+        },
+        {
+          "m_rawValue": 229376000
+        }
+      ],
+      "MaxPrices": [
+        {
+          "m_rawValue": 98304000
+        },
+        {
+          "m_rawValue": 163840000
+        },
+        {
+          "m_rawValue": 229376000
+        },
+        {
+          "m_rawValue": 360448000
+        },
+        {
+          "m_rawValue": 393216000
+        }
+      ],
+      "LevelModifiers": [
+        {
+          "LzTag": "oilprice",
+          "Type": "settier",
+          "Name": "CompanyMinPrices",
+          "MinValues": [
+            {
+              "m_rawValue": 39321
+            },
+            {
+              "m_rawValue": 44564
+            },
+            {
+              "m_rawValue": 49807
+            },
+            {
+              "m_rawValue": 55050
+            },
+            {
+              "m_rawValue": 60293
+            }
+          ],
+          "MaxValues": [
+            {
+              "m_rawValue": 49807
+            },
+            {
+              "m_rawValue": 55050
+            },
+            {
+              "m_rawValue": 60293
+            },
+            {
+              "m_rawValue": 65536
+            },
+            {
+              "m_rawValue": 70778
+            }
+          ],
+          "Tier": 0,
+          "IsPercentage": false
+        }
+      ]
+    },
+    {
+      "Localization": "offer_saloon_right",
+      "Name": "offer_saloon_right",
+      "Guy": "onno",
+      "Chance": {
+        "m_rawValue": 49152
+      },
+      "AreaPriceModifiers": null,
+      "MinPrices": [
+        {
+          "m_rawValue": 32768000
+        },
+        {
+          "m_rawValue": 65536000
+        },
+        {
+          "m_rawValue": 117964800
+        },
+        {
+          "m_rawValue": 196608000
+        },
+        {
+          "m_rawValue": 229376000
+        }
+      ],
+      "MaxPrices": [
+        {
+          "m_rawValue": 98304000
+        },
+        {
+          "m_rawValue": 163840000
+        },
+        {
+          "m_rawValue": 229376000
+        },
+        {
+          "m_rawValue": 360448000
+        },
+        {
+          "m_rawValue": 393216000
+        }
+      ],
+      "LevelModifiers": [
+        {
+          "LzTag": "oilprice",
+          "Type": "settier",
+          "Name": "CompanyMinPrices",
+          "MinValues": [
+            {
+              "m_rawValue": 39321
+            },
+            {
+              "m_rawValue": 44564
+            },
+            {
+              "m_rawValue": 49807
+            },
+            {
+              "m_rawValue": 55050
+            },
+            {
+              "m_rawValue": 60293
+            }
+          ],
+          "MaxValues": [
+            {
+              "m_rawValue": 49807
+            },
+            {
+              "m_rawValue": 55050
+            },
+            {
+              "m_rawValue": 60293
+            },
+            {
+              "m_rawValue": 65536
+            },
+            {
+              "m_rawValue": 70778
+            }
+          ],
+          "Tier": 1,
+          "IsPercentage": false
+        }
+      ]
+    }
+  ],
+  "FirstHigherLowerOccasion": 3,
+  "HigherLowerPrizes": [
+    2000,
+    3000,
+    4000
+  ],
+  "HigherLowerCosts": [
+    500,
+    750,
+    1000
+  ],
+  "NumHigherLowerCards": 4,
+  "DiamondPricesMin": null,
+  "DiamondPricesMax": null,
+  "DiamondPriceVarietyFactors": null,
+  "DiamondPriceRounding": 0.0,
+  "Artifacts": [
+    {
+      "Name": "goldnugget",
+      "Province": "hills",
+      "MinBuyPrice": 300.0,
+      "MaxBuyPrice": 1000.0,
+      "MinSellPrice": 3750.0,
+      "MaxSellPrice": 20000.0,
+      "PriceRounding": 100.0
+    },
+    {
+      "Name": "quartz",
+      "Province": "hills",
+      "MinBuyPrice": 300.0,
+      "MaxBuyPrice": 1000.0,
+      "MinSellPrice": 3750.0,
+      "MaxSellPrice": 20000.0,
+      "PriceRounding": 100.0
+    },
+    {
+      "Name": "silverore",
+      "Province": "hills",
+      "MinBuyPrice": 300.0,
+      "MaxBuyPrice": 1000.0,
+      "MinSellPrice": 3750.0,
+      "MaxSellPrice": 20000.0,
+      "PriceRounding": 100.0
+    },
+    {
+      "Name": "spearhead",
+      "Province": "mountains",
+      "MinBuyPrice": 600.0,
+      "MaxBuyPrice": 2000.0,
+      "MinSellPrice": 7500.0,
+      "MaxSellPrice": 40000.0,
+      "PriceRounding": 100.0
+    },
+    {
+      "Name": "tribalvase",
+      "Province": "mountains",
+      "MinBuyPrice": 600.0,
+      "MaxBuyPrice": 2000.0,
+      "MinSellPrice": 7500.0,
+      "MaxSellPrice": 40000.0,
+      "PriceRounding": 100.0
+    },
+    {
+      "Name": "olmecshead",
+      "Province": "mountains",
+      "MinBuyPrice": 600.0,
+      "MaxBuyPrice": 2000.0,
+      "MinSellPrice": 7500.0,
+      "MaxSellPrice": 40000.0,
+      "PriceRounding": 100.0
+    },
+    {
+      "Name": "sabertooth",
+      "Province": "volcano",
+      "MinBuyPrice": 900.0,
+      "MaxBuyPrice": 3000.0,
+      "MinSellPrice": 11250.0,
+      "MaxSellPrice": 60000.0,
+      "PriceRounding": 100.0
+    },
+    {
+      "Name": "dinoskull",
+      "Province": "volcano",
+      "MinBuyPrice": 900.0,
+      "MaxBuyPrice": 3000.0,
+      "MinSellPrice": 11250.0,
+      "MaxSellPrice": 60000.0,
+      "PriceRounding": 100.0
+    },
+    {
+      "Name": "dinodna",
+      "Province": "volcano",
+      "MinBuyPrice": 900.0,
+      "MaxBuyPrice": 3000.0,
+      "MinSellPrice": 11250.0,
+      "MaxSellPrice": 60000.0,
+      "PriceRounding": 100.0
+    }
+  ],
+  "UndergroundMarketSize": 4,
+  "UndergroundBadOfferResetChance": 0.7,
+  "ArtifactSellerNames": [
+    "collection_seller_name_1",
+    "collection_seller_name_2",
+    "collection_seller_name_3",
+    "collection_seller_name_4",
+    "collection_seller_name_5",
+    "collection_seller_name_6"
+  ],
+  "EstateGeneratorConfig": {
+    "Type": "Classic",
+    "EstateDistanceFactor": 0.0,
+    "MultiplayerConfig": null
+  },
+  "TitleLocalizationID": "campaign_title_thio"
+}

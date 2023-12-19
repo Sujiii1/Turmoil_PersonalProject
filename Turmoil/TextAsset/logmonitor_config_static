@@ -1,0 +1,15 @@
+{
+	"ConnectionStrings": {
+		"110001": "https://logmonitor.leiting.com",
+		"210009": "https://logmonitor.leiting.com",
+		"130005": "https://logmonitor.leiting.com",
+		"130002": "https://logmonitor.leiting.com",
+		"130008": "https://logmonitor.leiting.com",
+		"110006": "https://logmonitor.leiting.com",
+		"130061": "https://logmonitor.leiting.com",
+		"110003": "https://logmonitor.leiting.com",
+		"130009": "https://logmonitor.leiting.com",
+		"310001": "https://shiydhloginneros.leiting.com",
+		"410001": "https://shiydhloginneros.leiting.com"
+	}
+}
