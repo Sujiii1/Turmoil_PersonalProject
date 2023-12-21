@@ -29,15 +29,22 @@ public class Inputmanager : MonoBehaviour
             trajectoryLine.enabled = true;
             trajectoryLine.positionCount = 2;
 
+/*
+            if (TryGetComponent(out EssentialObject a))          //스크립트 참조 하기
+            {
+                game = a;
+
+            }
+            else
+            {
+                return;
+            }*/
+
             // 드릴 시작점의 포지션 넣기
-            /*      if(TryGetComponent(out EssentialObject a))          //스크립트 참조 하기
-                  {
-                      game = a;
+            trajectoryLine.SetPosition(0, new Vector3(FindObjectOfType<EssentialObject>().transform.position.x, FindObjectOfType<EssentialObject>().transform.position.y, -1f));
+            //trajectoryLine.SetPosition(0, FindObjectOfType<EssentialObject>().transform.position);
 
-                  }*/
-            trajectoryLine.SetPosition(0, FindObjectOfType<EssentialObject>().transform.position);
-
-            trajectoryLine.SetPosition(1, mousePos);
+            trajectoryLine.SetPosition(1, new Vector3(mousePos.x, mousePos.y, -1));
         }
 
 

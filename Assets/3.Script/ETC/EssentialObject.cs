@@ -5,10 +5,15 @@ using UnityEngine.UI;
 
 public class EssentialObject : MonoBehaviour
 {
-    SpriteRenderer sprite;
+    //Button Position
+    public float x;
+    public float y;
+    public Vector3 buttonPos;
 
     public void startDrawButton()
     {
+        buttonPos = transform.position;
+
         Debug.Log(gameObject.transform.position);
     }
 
