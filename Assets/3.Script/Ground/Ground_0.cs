@@ -11,6 +11,10 @@ public class Ground_0 : MonoBehaviour
     float worldWidth, worldHeight;
     int pixelWidth, pixelHeight;
 
+    [SerializeField] private bool isWork;
+    [SerializeField] private bool isCol;
+
+
     private void Start()
     {
         //newTexture = new Texture2D(100, 20);
@@ -44,52 +48,69 @@ public class Ground_0 : MonoBehaviour
         //Debug.Log("World:" + worldWidth + "," + worldHeight + "Pixel:" + pixelWidth + "," + pixelHeight);
 
         gameObject.AddComponent<PolygonCollider2D>();
-
     }
 
+
     #region[Drill Destroy]
-    public void makeHole(BoxCollider2D col)
+    
+    bool isStartco = false;
+    public IEnumerator makeHole_co(BoxCollider2D col)
     {
+        isStartco = true;
+        //drill.isWork = false;
         Vector2Int colliderCenter = wolrdToPixel(col.bounds.center);
         int radius = Mathf.RoundToInt(col.bounds.size.x / 2 * pixelWidth / worldWidth);
-
         // Iterate over the pixels inside the collider's shape
-        for (int x = colliderCenter.x - radius; x <= colliderCenter.x + radius; x++)
-        {
-            for (int y = colliderCenter.y - radius; y <= colliderCenter.y + radius; y++)
-            {
-                float newX = 0;
-                float newY = 0;
-
-                // Check if the pixel is within the circular area
-                if (Vector2.Distance(new Vector2(x, y), colliderCenter) <= radius)
+        /*        for (int x = colliderCenter.x - radius; x <= colliderCenter.x + radius; x++)
                 {
-                    // Set the pixel color to Color.clear
-                    newTexture.SetPixel(x, y, Color.clear);
-                }
-            }
-        }
+                    for (int y = colliderCenter.y - radius; y <= colliderCenter.y + radius; y++)
+                    {
+                        // Check if the pixel is within the circular area
+                        if (Vector2.Distance(new Vector2(x, y), colliderCenter) <= radius)
+                        {
+                            // Set the pixel color to Color.clear
+                            newTexture.SetPixel(x, y, Color.clear);
+                        }
+                    }
+                }*/
 
         for (int x = colliderCenter.x - radius; x <= colliderCenter.x; x++)
         {
-            /*int y = 
-            newTexture.SetPixel(x, y, Color.clear);*/
+            for (int y = colliderCenter.y; y > -x + colliderCenter.x + colliderCenter.y - radius; y--)
+            {
+                newTexture.SetPixel(x, y, Color.clear);
+            }
+        }
+
+        for (int x = colliderCenter.x; x <= colliderCenter.x + radius; x++)
+        {
+            for (int y = colliderCenter.y; y > colliderCenter.y + x - colliderCenter.x - radius; y--)
+            {
+                newTexture.SetPixel(x, y, Color.clear);
+            }
         }
 
         newTexture.Apply();
         makeSprite();
-
         Destroy(gameObject.GetComponent<PolygonCollider2D>());
-        gameObject.AddComponent<PolygonCollider2D>();
-    }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (!collision.GetComponent<BoxCollider2D>()) return;
-        makeHole(collision.GetComponent<BoxCollider2D>());
+
+        yield return null;
+
+        while (true)
+        {
+            if(!gameObject.TryGetComponent(out PolygonCollider2D p))
+            {
+                gameObject.AddComponent<PolygonCollider2D>();
+                break;
+            }
+            yield return null;
+        }
+        isStartco = false;
     }
 
     #endregion
+
 
     #region[Texture Remove]
 

@@ -11,13 +11,13 @@ public class Controller_0 : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetMouseButton(0))
+  /*      if(Input.GetMouseButton(0))
         {
             MousPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Collider2D overCollider2d = Physics2D.OverlapCircle(MousPosition, 0.01f, Ground);
             overCollider2d.gameObject.GetComponent<Ground_0>().makeDot(MousPosition);
-        }
-        else if(Input.GetMouseButtonDown(1))
+        }*/
+        if(Input.GetMouseButtonDown(1))
         {
             MousPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             MousPosition.z = 0f;
