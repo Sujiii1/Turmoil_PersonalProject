@@ -7,7 +7,7 @@ public class Controller : MonoBehaviour
     Vector3 MousPosition;
     public LayerMask Ground;
 
-    public GameObject drills;
+
 
     private void Update()
     {
@@ -21,7 +21,6 @@ public class Controller : MonoBehaviour
         {
             MousPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             MousPosition.z = 0f;
-            Instantiate(drills, MousPosition, drills.transform.rotation);
         }
     }
 }

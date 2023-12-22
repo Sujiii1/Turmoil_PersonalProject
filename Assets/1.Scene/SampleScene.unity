@@ -180,7 +180,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1108299609
   m_SortingLayer: 1
-  m_SortingOrder: 10
+  m_SortingOrder: 12
   m_Positions:
   - {x: 3.4, y: 3, z: -1}
   - {x: 3.5, y: -3, z: -1}
@@ -254,6 +254,7 @@ MonoBehaviour:
   trajectoryLine: {fileID: 185435569}
   endSpritePrefebs: {fileID: 5563415410338192990, guid: 5a631fdf31e37284a853c5700d5e1cc3, type: 3}
   endSprite: {fileID: 0}
+  drills: {fileID: 3219255539022468948, guid: feff78290ddad6947ad738bd3b3d934b, type: 3}
 --- !u!4 &185435571
 Transform:
   m_ObjectHideFlags: 0
@@ -988,7 +989,6 @@ MonoBehaviour:
   Ground:
     serializedVersion: 2
     m_Bits: 64
-  drills: {fileID: 3219255539022468948, guid: feff78290ddad6947ad738bd3b3d934b, type: 3}
 --- !u!1 &1724707483
 GameObject:
   m_ObjectHideFlags: 0

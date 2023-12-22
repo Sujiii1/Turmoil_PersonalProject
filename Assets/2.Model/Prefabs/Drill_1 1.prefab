@@ -113,6 +113,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c80f89791f2c38341ab6546788b624c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drillPos: {x: 0, y: 0, z: 0}
+  drillRot: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &3219255539022468948
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,6 +216,8 @@ MonoBehaviour:
   desArea: {fileID: 3219255538053266306}
   isWork: 1
   isCol: 0
+  startPos: {x: 0, y: 0, z: 0}
+  endPos: {x: 0, y: 0, z: 0}
 --- !u!61 &1083920171170833969
 BoxCollider2D:
   m_ObjectHideFlags: 0

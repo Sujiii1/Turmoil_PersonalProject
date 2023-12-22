@@ -8,6 +8,24 @@ public class Inputmanager : MonoBehaviour
     [SerializeField] private GameObject endSpritePrefebs;
     public GameObject endSprite;
 
+    public static Inputmanager instance = null;
+
+    private Vector3 startPos;
+    private Vector3 endPos;
+    public GameObject drills;
+
+    private void Awake()
+    {
+        #region [싱글톤]
+        if (instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
+        #endregion
+
+    }
 
     private void Start()
     {
@@ -32,6 +50,7 @@ public class Inputmanager : MonoBehaviour
 
             // 드릴 시작점의 포지션 넣기
             trajectoryLine.SetPosition(0, new Vector3(FindObjectOfType<EssentialObject>().transform.position.x, FindObjectOfType<EssentialObject>().transform.position.y, -1f));
+            startPos = new Vector3(FindObjectOfType<EssentialObject>().transform.position.x, FindObjectOfType<EssentialObject>().transform.position.y, -1f);
             //trajectoryLine.SetPosition(0, FindObjectOfType<EssentialObject>().transform.position);
 
             trajectoryLine.SetPosition(1, new Vector3(mousePos.x, mousePos.y, -1));
@@ -51,16 +70,23 @@ public class Inputmanager : MonoBehaviour
             trajectoryLine.enabled = false;
             if(endSprite != null)
             {
+                endPos = endSprite.transform.position;
                 Destroy(endSprite);
+                Instantiate(drills, startPos, drills.transform.rotation);
                 Debug.Log($"{endSprite.transform.position}");
             }
         }
     }
     #endregion
 
+    public Vector3 GetStartSpritgePos()
+    {
+        return startPos;
+    }
+
     public Vector3 GetEndSpritgePos()
     {
-        return endSprite.transform.position;
+        return endPos;
     }
 
 }

@@ -2,14 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Drill_0 : MonoBehaviour
+public class Drill_Move : MonoBehaviour
 {
     public GameObject desArea;
     public bool isWork = true;
     [SerializeField] private bool isCol = false;
+
+    [SerializeField] private Vector3 startPos;
+    [SerializeField] private Vector3 endPos;
+
+    private Vector2 direction;
+
     private void Start()
     {
         //desArea.SetActive(false);
+        startPos = Inputmanager.instance.GetStartSpritgePos();
+        endPos = Inputmanager.instance.GetEndSpritgePos();
+        direction = (endPos - startPos).normalized;
+
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        Quaternion angleAxis = Quaternion.AngleAxis(angle, Vector3.forward);
+        //Quaternion rotation = Quaternion.LookRotation(angleAxis);
+        transform.rotation = angleAxis;
 
         StartCoroutine(drill_co());
 
@@ -25,7 +39,8 @@ public class Drill_0 : MonoBehaviour
         {
             if(isWork)
             {
-                gameObject.transform.position += new Vector3(0, -1f, 0) * Time.deltaTime*0.5f;
+                gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, endPos, 0.5f * Time.deltaTime);
+                //if (gameObject.transform.position == endPos) Destroy(gameObject);
             }
             yield return null;
         }
