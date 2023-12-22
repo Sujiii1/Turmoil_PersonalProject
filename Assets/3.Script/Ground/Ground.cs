@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ground_0 : MonoBehaviour
+public class Ground : MonoBehaviour
 {
     public Texture2D groTexture;
     Texture2D newTexture;

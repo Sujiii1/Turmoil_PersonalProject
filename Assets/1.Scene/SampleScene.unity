@@ -180,10 +180,10 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1108299609
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Positions:
-  - {x: -3, y: 3, z: -2}
-  - {x: 3, y: -3, z: -2}
+  - {x: 3.4, y: 3, z: -1}
+  - {x: 3.5, y: -3, z: -1}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -191,8 +191,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 1
+        time: 0.005554199
+        value: 0.08571587
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -252,6 +252,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trajectoryLine: {fileID: 185435569}
+  endSpritePrefebs: {fileID: 5563415410338192990, guid: 5a631fdf31e37284a853c5700d5e1cc3, type: 3}
+  endSprite: {fileID: 0}
 --- !u!4 &185435571
 Transform:
   m_ObjectHideFlags: 0
@@ -782,7 +784,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 
 --- !u!222 &1555288518
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -820,7 +822,7 @@ RectTransform:
   m_GameObject: {fileID: 1690292055}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 0.65, y: 0.65, z: 0.65}
   m_Children:
   - {fileID: 1555288516}
   m_Father: {fileID: 1114694839}
@@ -907,7 +909,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 13527793884104b46b7446fd7464c3ed, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac247c42dc5d87844ab6771e453c9bbb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -980,7 +982,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1691100612}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d14c27bd3e2cb324793a5b1d74615b59, type: 3}
+  m_Script: {fileID: 11500000, guid: f1ab251e4a88db1478f42f42b971cc35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Ground:
