@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Drill
+  - Endpos
+  - Plus
   layers:
   - Default
   - TransparentFX

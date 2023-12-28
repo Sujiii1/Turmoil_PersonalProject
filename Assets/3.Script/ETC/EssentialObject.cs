@@ -10,8 +10,17 @@ public class EssentialObject : MonoBehaviour
     public float y;
     public Vector3 buttonPos;
 
+    public bool isSelect = false;
+
+    public void set_Select()
+    {
+        isSelect = false;
+    }
+
     public void startDrawButton()
     {
+        isSelect = true;
+        Debug.Log("isSelect : " + isSelect);
         buttonPos = transform.position;
 
         Debug.Log(gameObject.transform.position);

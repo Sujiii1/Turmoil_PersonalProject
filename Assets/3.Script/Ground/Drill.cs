@@ -17,7 +17,6 @@ public class Drill : MonoBehaviour
     {
         drillCol = GetComponent<BoxCollider2D>();
         drillPos = transform.position;
-
     }
 
     private void OnTriggerStay2D(Collider2D col)
@@ -28,7 +27,7 @@ public class Drill : MonoBehaviour
             {
                 StartCoroutine(g.makeHole_co(drillCol));
             }
-            if(col.TryGetComponent(out Inputmanager i))
+            if(col.TryGetComponent(out LineRender i))
             {
                 //drillPos = i.endSprite.transform.position;
                 drillRot = i.endSprite.transform.rotation;

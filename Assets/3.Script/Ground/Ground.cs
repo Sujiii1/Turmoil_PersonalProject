@@ -14,7 +14,6 @@ public class Ground : MonoBehaviour
     [SerializeField] private bool isWork;
     [SerializeField] private bool isCol;
 
-
     private void Start()
     {
         //newTexture = new Texture2D(100, 20);
@@ -60,7 +59,7 @@ public class Ground : MonoBehaviour
         //drill.isWork = false;
         Vector2Int colliderCenter = wolrdToPixel(col.bounds.center);
         int radius = Mathf.RoundToInt(col.bounds.size.x / 2 * pixelWidth / worldWidth);
-        // Iterate over the pixels inside the collider's shape
+
         /*        for (int x = colliderCenter.x - radius; x <= colliderCenter.x + radius; x++)
                 {
                     for (int y = colliderCenter.y - radius; y <= colliderCenter.y + radius; y++)
@@ -93,8 +92,6 @@ public class Ground : MonoBehaviour
         newTexture.Apply();
         makeSprite();
         Destroy(gameObject.GetComponent<PolygonCollider2D>());
-
-
         yield return null;
 
         while (true)
