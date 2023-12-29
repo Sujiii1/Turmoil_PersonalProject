@@ -16,6 +16,8 @@ public class LineRender : MonoBehaviour
 
     public GameObject Drill;
 
+    public bool IsMouseUp = false;
+
     private void Awake()
     {
         #region [½Ì±ÛÅæ]
@@ -40,7 +42,7 @@ public class LineRender : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             RaycastHit2D hit = Physics2D.Raycast(mousePos, transform.forward, 100f);
-            Debug.Log(hit.transform.name);
+            //Debug.Log(hit.transform.name);
             if(hit.transform.CompareTag("Endpos")|| hit.transform.CompareTag("Plus"))
             {
                 trajectoryLine.enabled = true;
@@ -59,7 +61,6 @@ public class LineRender : MonoBehaviour
             if (endSprite == null)
             {
                 endSprite = Instantiate(endSpritePrefebs, new Vector3(mousePos.x, mousePos.y, -0.1f), Quaternion.identity);
-
             }
             else
             {
@@ -74,7 +75,7 @@ public class LineRender : MonoBehaviour
                 Instantiate(endSprite, endPos, Quaternion.identity);         //GameObject Clone =  //endSprit À¯Áö 
                 Destroy(endSprite);
                 Drill=Instantiate(drills, startPos, drills.transform.rotation);
-
+                IsMouseUp = true;
                 //Debug.Log($"{endSprite.transform.position}");
             }
         }

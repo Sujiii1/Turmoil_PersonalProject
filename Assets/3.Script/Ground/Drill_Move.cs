@@ -60,8 +60,11 @@ public class Drill_Move : MonoBehaviour
                 LineRender.instance.Drill.GetComponent<BoxCollider2D>().enabled = false;        
                 LineRender.instance.Drill.transform.GetChild(0).transform.GetComponent<BoxCollider2D>().enabled = false;    //endPoint-> startPoint 가 되면 true
                 LineRender.instance.Drill = null;
+
+                StartCoroutine(drillCol());
             }
         }
+        
     }
     public IEnumerator drill_co()
     {
@@ -72,6 +75,17 @@ public class Drill_Move : MonoBehaviour
                 gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, endPos, 0.5f * Time.deltaTime);
             }
             yield return null;
+        }
+    }
+
+    private IEnumerator drillCol()
+    {
+        yield return new WaitForSeconds(0.1f);
+
+        if(LineRender.instance.Drill != null)
+        {
+            LineRender.instance.Drill.GetComponent<BoxCollider2D>().enabled = true;
+            LineRender.instance.Drill.transform.GetChild(0).transform.GetComponent<BoxCollider2D>().enabled = true;    //endPoint-> startPoint 가 되면 true
         }
     }
     //private void OnCollisionEnter2D(Collision2D collision)
