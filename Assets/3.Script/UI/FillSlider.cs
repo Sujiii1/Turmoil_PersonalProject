@@ -7,8 +7,9 @@ public class FillSlider : MonoBehaviour
 {
     public int maxValue;
     public Image fill;
+ // public float reduceSpeed;
 
-    public int currentValue;
+    private int currentValue;
 
     private void Start()
     {
@@ -16,7 +17,25 @@ public class FillSlider : MonoBehaviour
         fill.fillAmount = 1;
     }
 
-    public void Add(int i)
+
+    private void Update()
+    {
+        if (Input.GetMouseButton(2))
+        {
+            Deduct(1);
+        }
+
+    }
+    /*private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Endpos"))
+        {
+            Add(10);
+            Deduct(3);
+        }
+    }*/
+
+   /* public void Add(int i)
     {
         //현재 Value 증가
         currentValue += i;
@@ -26,17 +45,16 @@ public class FillSlider : MonoBehaviour
 
         fill.fillAmount = (float)currentValue / maxValue;
 
-    }
+    }*/
     public void Deduct(int i)
     {
         //현재 Value 감소
         currentValue -= i;
 
-        if (currentValue < maxValue)
+        if (currentValue < 0)
             currentValue = 0;
 
         fill.fillAmount = (float)currentValue / maxValue;
-
     }
 
 }

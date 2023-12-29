@@ -11,7 +11,7 @@ public class EndPosManager : MonoBehaviour
 
     private float dist;
     private float counter;
-    private float lineRenderSpeed;
+    public float lineRenderSpeed = 1;
 
    
     private void Start()
@@ -26,9 +26,6 @@ public class EndPosManager : MonoBehaviour
 
         dist = Vector3.Distance(startPos, endPos);
     }
-
-
-
 /*    private void oildraw()
     {
         if (endPos != null)
@@ -48,27 +45,36 @@ public class EndPosManager : MonoBehaviour
     {
         if(collision.CompareTag("OilSpot") && LineRender.instance.IsMouseUp)
         {
-            
+
             oilLine.enabled = true;
-            Debug.Log(oilLine.enabled);
+            StartCoroutine(OilPumpCo());
+            //Debug.Log(oilLine.enabled);
+            Debug.Log(collision.CompareTag("OilSpot"));
+/*            if (counter < dist)
+            {
+                counter += .1f / lineRenderSpeed;
+                float x = Mathf.Lerp(0, dist, counter);
 
+                Vector3 pointAlongLine = x * Vector3.Normalize(endPos - startPos) + startPos;
+                oilLine.SetPosition(1, pointAlongLine);
+            }*/
 
-            StartCoroutine(oilPumpCo());
         }
     }
-    private IEnumerator oilPumpCo()
+    private IEnumerator OilPumpCo()
     {
         float x = 0;
-        while (x > 0.9)6
+        while (true)
         {
+            Debug.Log("x : " + x);
+            Debug.Log("dist : " + dist);
             counter += .1f / lineRenderSpeed;
-            x = Mathf.Lerp(0, dist, counter);
+            x = Mathf.Lerp(dist, 0, counter);
             Vector3 pointAlongLine = x * Vector3.Normalize(endPos - startPos) + startPos;
+            Debug.Log("pointAlongLine : " + pointAlongLine);
             oilLine.SetPosition(1, pointAlongLine);
 
             yield return new WaitForSeconds(0.1f);
         }
-
     }
-
 }

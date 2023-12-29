@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5563415410338192990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4859116, y: -0.42595297, z: -0.1}
+  m_LocalPosition: {x: 6.0444455, y: 3.688889, z: -0.1}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -225,6 +225,7 @@ MonoBehaviour:
   oilLine: {fileID: -729318711040650824}
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 0, z: 0}
+  lineRenderSpeed: 20
 --- !u!50 &2185647527283924886
 Rigidbody2D:
   serializedVersion: 4

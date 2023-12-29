@@ -17,6 +17,7 @@ public class LineRender : MonoBehaviour
     public GameObject Drill;
 
     public bool IsMouseUp = false;
+    public bool isDrag = false;
 
     private void Awake()
     {
@@ -41,14 +42,16 @@ public class LineRender : MonoBehaviour
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if(Input.GetMouseButtonDown(0))
         {
+            isDrag = true;
+
             RaycastHit2D hit = Physics2D.Raycast(mousePos, transform.forward, 100f);
             //Debug.Log(hit.transform.name);
             if(hit.transform.CompareTag("Endpos")|| hit.transform.CompareTag("Plus"))
             {
                 trajectoryLine.enabled = true;
                 trajectoryLine.positionCount = 2;
-                trajectoryLine.SetPosition(0, new Vector3(hit.transform.transform.position.x, hit.transform.transform.position.y, -0.05f));
-                startPos = new Vector3(hit.transform.position.x, hit.transform.position.y, -0.05f);
+                trajectoryLine.SetPosition(0, new Vector3(hit.transform.transform.position.x, hit.transform.transform.position.y, -1f));
+                startPos = new Vector3(hit.transform.position.x, hit.transform.position.y, -1f);
 
               
             }
@@ -57,18 +60,20 @@ public class LineRender : MonoBehaviour
         }
         if (Input.GetMouseButton(0))
         {
-            trajectoryLine.SetPosition(1, new Vector3(mousePos.x, mousePos.y, -0.1f));
+            trajectoryLine.SetPosition(1, new Vector3(mousePos.x, mousePos.y, -1f));
             if (endSprite == null)
             {
-                endSprite = Instantiate(endSpritePrefebs, new Vector3(mousePos.x, mousePos.y, -0.1f), Quaternion.identity);
+                endSprite = Instantiate(endSpritePrefebs, new Vector3(mousePos.x, mousePos.y, -1f), Quaternion.identity);
             }
             else
             {
-                endSprite.transform.position = new Vector3(mousePos.x, mousePos.y, -0.1f);
+                endSprite.transform.position = new Vector3(mousePos.x, mousePos.y, -1f);
             }
         }
         if (Input.GetMouseButtonUp(0))
         {
+            isDrag = false;
+
             if (endSprite != null)
             {
                 endPos = endSprite.transform.position;
@@ -79,9 +84,6 @@ public class LineRender : MonoBehaviour
                 //Debug.Log($"{endSprite.transform.position}");
             }
         }
-      
-
-
     }
 
     #region[LineRenderer Draw]
