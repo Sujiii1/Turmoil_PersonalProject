@@ -34,57 +34,63 @@ public class LineRender : MonoBehaviour
     private void Start()
     {
         trajectoryLine.enabled = false;
-        
     }
 
     private void Update()
     {
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if(Input.GetMouseButtonDown(0))
-        {
-            isDrag = true;
-
-            RaycastHit2D hit = Physics2D.Raycast(mousePos, transform.forward, 100f);
-            //Debug.Log(hit.transform.name);
-            if(hit.transform.CompareTag("Endpos")|| hit.transform.CompareTag("Plus"))
-            {
-                trajectoryLine.enabled = true;
-                trajectoryLine.positionCount = 2;
-                trajectoryLine.SetPosition(0, new Vector3(hit.transform.transform.position.x, hit.transform.transform.position.y, -1f));
-                startPos = new Vector3(hit.transform.position.x, hit.transform.position.y, -1f);
-
-              
-            }
-            //showTrajectoryLine();
-
-        }
-        if (Input.GetMouseButton(0))
-        {
-            trajectoryLine.SetPosition(1, new Vector3(mousePos.x, mousePos.y, -1f));
-            if (endSprite == null)
-            {
-                endSprite = Instantiate(endSpritePrefebs, new Vector3(mousePos.x, mousePos.y, -1f), Quaternion.identity);
-            }
-            else
-            {
-                endSprite.transform.position = new Vector3(mousePos.x, mousePos.y, -1f);
-            }
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            isDrag = false;
-
-            if (endSprite != null)
-            {
-                endPos = endSprite.transform.position;
-                Instantiate(endSprite, endPos, Quaternion.identity);         //GameObject Clone =  //endSprit 유지 
-                Destroy(endSprite);
-                Drill=Instantiate(drills, startPos, drills.transform.rotation);
-                IsMouseUp = true;
-                //Debug.Log($"{endSprite.transform.position}");
-            }
-        }
+        SetDraw();
     }
+
+    #region[Compare Draw]
+    public void SetDraw()
+    {
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(mousePos, transform.forward, 100f);
+        if (hit.collider != null)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                isDrag = true;
+
+                Debug.Log(hit.transform.name);
+                if (hit.transform.CompareTag("Plus") || hit.transform.CompareTag("Endpos"))
+                {
+                    trajectoryLine.enabled = true;
+                    trajectoryLine.positionCount = 2;
+                    trajectoryLine.SetPosition(0, new Vector3(hit.transform.transform.position.x, hit.transform.transform.position.y, -1f));
+                    startPos = new Vector3(hit.transform.position.x, hit.transform.position.y, -1f);
+                }
+
+            }
+            if (Input.GetMouseButton(0))
+            {
+                trajectoryLine.SetPosition(1, new Vector3(mousePos.x, mousePos.y, -1f));
+                if (endSprite == null)
+                {
+                    endSprite = Instantiate(endSpritePrefebs, new Vector3(mousePos.x, mousePos.y, -1f), Quaternion.identity);
+                }
+                else
+                {
+                    endSprite.transform.position = new Vector3(mousePos.x, mousePos.y, -1f);
+                }
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                isDrag = false;
+
+                if (endSprite != null)
+                {
+                    endPos = endSprite.transform.position;
+                    Instantiate(endSprite, endPos, Quaternion.identity);         //GameObject Clone   //endSprit 유지 
+                    Destroy(endSprite);
+                    Drill = Instantiate(drills, startPos, drills.transform.rotation);
+                    IsMouseUp = true;
+                }
+            }
+        }
+
+    }
+    #endregion
 
     #region[LineRenderer Draw]
 
@@ -101,9 +107,8 @@ public class LineRender : MonoBehaviour
 
             // 드릴 시작점의 포지션 넣기
 
-
-            trajectoryLine.SetPosition(0, new Vector3(FindObjectOfType<EssentialObject>().transform.position.x, FindObjectOfType<EssentialObject>().transform.position.y, -1f));
-            startPos = new Vector3(FindObjectOfType<EssentialObject>().transform.position.x, FindObjectOfType<EssentialObject>().transform.position.y, -1f);
+            trajectoryLine.SetPosition(0, new Vector3(FindObjectOfType<LineStartButton>().transform.position.x, FindObjectOfType<LineStartButton>().transform.position.y, -1f));
+            startPos = new Vector3(FindObjectOfType<LineStartButton>().transform.localPosition.x, FindObjectOfType<LineStartButton>().transform.localPosition.y, -1f);
             //trajectoryLine.SetPosition(0, FindObjectOfType<EssentialObject>().transform.position);
 
             trajectoryLine.SetPosition(1, new Vector3(mousePos.x, mousePos.y, -1));
@@ -112,7 +117,6 @@ public class LineRender : MonoBehaviour
             if(endSprite== null)
             {
                 endSprite = Instantiate(endSpritePrefebs, new Vector3(mousePos.x, mousePos.y, -1), Quaternion.identity);
-                
             }
             else
             {
@@ -127,10 +131,7 @@ public class LineRender : MonoBehaviour
                 endPos = endSprite.transform.position;
                 Instantiate(endSprite, endPos, Quaternion.identity);         //GameObject Clone =  //endSprit 유지 
                 Destroy(endSprite);
-                
                 Instantiate(drills, startPos, drills.transform.rotation);
-                 
-                //Debug.Log($"{endSprite.transform.position}");
             }
         }
     }
@@ -141,6 +142,7 @@ public class LineRender : MonoBehaviour
 
     #endregion
 
+    #region [Pos]
     public Vector3 GetStartSpritgePos()
     {
         return startPos;
@@ -155,5 +157,5 @@ public class LineRender : MonoBehaviour
     {
         return trajectoryLine;
     }
-
+    #endregion
 }

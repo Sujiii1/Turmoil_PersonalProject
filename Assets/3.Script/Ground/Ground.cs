@@ -50,28 +50,14 @@ public class Ground : MonoBehaviour
     }
 
 
-    #region[Drill Destroy]
+    #region[Ground Destroy | Drill Destroy]
     
     bool isStartco = false;
     public IEnumerator makeHole_co(BoxCollider2D col)
     {
         isStartco = true;
-        //drill.isWork = false;
         Vector2Int colliderCenter = wolrdToPixel(col.bounds.center);
         int radius = Mathf.RoundToInt(col.bounds.size.x / 2 * pixelWidth / worldWidth);
-
-        /*        for (int x = colliderCenter.x - radius; x <= colliderCenter.x + radius; x++)
-                {
-                    for (int y = colliderCenter.y - radius; y <= colliderCenter.y + radius; y++)
-                    {
-                        // Check if the pixel is within the circular area
-                        if (Vector2.Distance(new Vector2(x, y), colliderCenter) <= radius)
-                        {
-                            // Set the pixel color to Color.clear
-                            newTexture.SetPixel(x, y, Color.clear);
-                        }
-                    }
-                }*/
 
         for (int x = colliderCenter.x - radius; x <= colliderCenter.x; x++)
         {
@@ -92,11 +78,12 @@ public class Ground : MonoBehaviour
         newTexture.Apply();
         makeSprite();
         Destroy(gameObject.GetComponent<PolygonCollider2D>());
+
         yield return null;
 
         while (true)
         {
-            if(!gameObject.TryGetComponent(out PolygonCollider2D p))
+            if (!gameObject.TryGetComponent(out PolygonCollider2D p))
             {
                 gameObject.AddComponent<PolygonCollider2D>();
                 break;
@@ -105,11 +92,10 @@ public class Ground : MonoBehaviour
         }
         isStartco = false;
     }
-
     #endregion
 
 
-    #region[Texture Remove]
+    #region[Texture Remove - makeDot(), makeSprite(), wolrdToPixel()]
 
     public void makeDot(Vector3 pos)
     {
@@ -125,7 +111,7 @@ public class Ground : MonoBehaviour
         makeSprite();
     }
 
-    void makeSprite()
+    public void makeSprite()
     {
         //Sprite.Create 를 써서 텍스처를 0,0부터 텍스처의 넚이와 높이만큼 사각형 Sprite. Pivot: 0.5,0.5
         spriteRen.sprite = Sprite.Create(newTexture, new Rect(0, 0, newTexture.width, newTexture.height), Vector2.one * 0.5f);

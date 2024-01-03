@@ -49,3 +49,9 @@ TagManager:
   - name: ForeGround
     uniqueID: 3186667687
     locked: 0
+  - name: Pressed
+    uniqueID: 4060257563
+    locked: 0
+  - name: Horse
+    uniqueID: 2680685821
+    locked: 0
