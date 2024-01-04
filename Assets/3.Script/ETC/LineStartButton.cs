@@ -25,12 +25,4 @@ public class LineStartButton : MonoBehaviour
 
         Debug.Log(gameObject.transform.position);
     }
-
-/*    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.CompareTag("pressed"))
-        {
-            
-        }
-    }*/
 }
