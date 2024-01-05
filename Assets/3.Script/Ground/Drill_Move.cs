@@ -39,22 +39,27 @@ public class Drill_Move : MonoBehaviour
         dist = Vector3.Distance(startPos, endPos);
     }
 
-    private void Update()    //Pipe Draw
+    private void Update()
     {
-        LineRender.instance.GetLineRenderer().SetPosition(0, transform.position);
+            //Pipe Draw
+            LineRender.instance.GetLineRenderer().SetPosition(0, transform.position);
 
 
-        pipeLine.SetPosition(1, transform.position);
-        if(Vector3.Distance(transform.position,endPos) <=0.1f)
-        {
-            if (LineRender.instance.Drill != null)
+            pipeLine.SetPosition(1, transform.position);
+            if (Vector3.Distance(transform.position, endPos) <= 0.1f)
             {
-                LineRender.instance.Drill.GetComponent<BoxCollider2D>().enabled = true;
-                LineRender.instance.Drill.transform.GetChild(0).transform.GetComponent<BoxCollider2D>().enabled = true; 
-                LineRender.instance.Drill = null;
+                if (LineRender.instance.Drill != null)
+                {
+                    LineRender.instance.Drill.GetComponent<BoxCollider2D>().enabled = true;
+                    LineRender.instance.Drill.transform.GetChild(0).transform.GetComponent<BoxCollider2D>().enabled = true;
+                    LineRender.instance.Drill = null;
+                }
             }
-        }  
+        
     }
+
+
+
     public IEnumerator drill_co()
     {
         while(true)
@@ -67,6 +72,9 @@ public class Drill_Move : MonoBehaviour
         }
     }
 
+
+    
+
     //private void OnCollisionEnter2D(Collision2D collision)
     //{
     //    if (!collision.transform.CompareTag("Ground") ||
@@ -75,16 +83,16 @@ public class Drill_Move : MonoBehaviour
     //    desArea.SetActive(true);
     //    //Destroy(this.gameObject, 0.02f);
     //}
-/*
-    private IEnumerator isWork_co()
-    {
-        isCol = true;
-        isWork = true;
-        desArea.SetActive(isWork);
-        yield return new WaitForSeconds(0.02f);
-        isWork = false;
-        desArea.SetActive(isWork);
-        yield return new WaitForSeconds(1f);
-        isCol = false;
-    }*/
+    /*
+        private IEnumerator isWork_co()
+        {
+            isCol = true;
+            isWork = true;
+            desArea.SetActive(isWork);
+            yield return new WaitForSeconds(0.02f);
+            isWork = false;
+            desArea.SetActive(isWork);
+            yield return new WaitForSeconds(1f);
+            isCol = false;
+        }*/
 }

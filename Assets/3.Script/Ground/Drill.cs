@@ -12,8 +12,6 @@ public class Drill : MonoBehaviour      //Dig the Ground
     public Vector3 drillPos;
     public Quaternion drillRot;
 
-    
-
     //Drill End Point -> Inputmanager- endSprite 의 Position 값
 
     private void OnEnable()
@@ -25,11 +23,17 @@ public class Drill : MonoBehaviour      //Dig the Ground
     private void Start()
     {
         ground = GetComponent<Ground>();
+        
     }
     private void OnTriggerStay2D(Collider2D col)
     {
-        if(col.CompareTag("Ground"))
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(mousePos, transform.forward, 100f);
+
+        if (col.CompareTag("Ground"))
         {
+            //그라운드 임을 인식 -> StartPos를 눌렀을 때 
+
             if(drillCol != null)
             {
                 if (col.TryGetComponent(out Ground g))

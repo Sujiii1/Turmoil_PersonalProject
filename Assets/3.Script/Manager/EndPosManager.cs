@@ -35,7 +35,6 @@ public class EndPosManager : MonoBehaviour
 
         //Colider
         edgeCollider2D = this.GetComponent<EdgeCollider2D>();
-
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -47,7 +46,7 @@ public class EndPosManager : MonoBehaviour
             oilLine.enabled = true;
             StartCoroutine(OilPumpCo());
             //Debug.Log(oilLine.enabled);
-            Debug.Log(collision.CompareTag("OilSpot"));
+           // Debug.Log(collision.CompareTag("OilSpot"));
         }
     }
 

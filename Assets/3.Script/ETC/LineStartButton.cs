@@ -5,12 +5,30 @@ using UnityEngine.UI;
 
 public class LineStartButton : MonoBehaviour
 {
+    private bool startButtonCheck = false;
     //Button Position
-    public float x;
-    public float y;
-    public Vector3 buttonPos;
+    public Vector3 buttonPos { get; private set; }
 
-    public bool isSelect = false;
+    private void Update()
+    {
+        if (startButtonCheck)
+        {
+            startButtonCheck = false;
+        }
+            
+    }
+
+    public void OnButtonClick()
+    {
+        startButtonCheck = true;
+        buttonPos = transform.position;
+        Debug.Log("OnButtonClick");
+
+    }
+
+    
+
+  /*  public bool isSelect = false;
 
     public void set_Select()
     {
@@ -24,5 +42,5 @@ public class LineStartButton : MonoBehaviour
         buttonPos = transform.position;
 
         Debug.Log(gameObject.transform.position);
-    }
+    }*/
 }
