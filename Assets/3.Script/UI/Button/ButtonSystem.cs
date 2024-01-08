@@ -12,14 +12,13 @@ public class ButtonSystem : MonoBehaviour
     {
         if (buttons.Count != buttonNumbers.Count)
         {
-            Debug.LogError("버튼과 숫자값이 일치하지 않습니다.");
             return;
         }
 
         AssignNumbersToButtons();
     }
 
-    private void AssignNumbersToButtons()
+    public void AssignNumbersToButtons()
     {
         // 숫자를 각 버튼에 할당
         for (int i = 0; i < buttons.Count; i++)
@@ -28,4 +27,6 @@ public class ButtonSystem : MonoBehaviour
             buttons[i].GetComponent<NumberButton>().SetButtonNumber(buttonNumber);
         }
     }
+
+
 }
