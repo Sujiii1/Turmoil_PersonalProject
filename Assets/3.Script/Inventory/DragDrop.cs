@@ -1,41 +1,91 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class DragDrop : MonoBehaviour
 {
-    [SerializeField] private Canvas canvas;
-    private RectTransform rectTransform;
+    //[SerializeField] GameObject DragObj;
+    [SerializeField] SpriteRenderer spriteRenderer;
+    public Vector3 LoadPos;
+    float startPosX;
+    float startPosY;
+    bool isBeingHeld = false;
+    public bool isInLine;
+    float SpaceObjPosY;
+    Vector3 SpaceObjPos;
+    Vector3 mousePos;
 
-    private void Awake()
+    private void Start()
     {
-        rectTransform = GetComponent<RectTransform>();
-    }
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        Debug.Log("OnBeginDrag");
-    }
-
-    public void OnDrag(PointerEventData eventData)
-    {
-        Debug.Log("OnDrag");
-        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;     //Item Canvas 이탈x
+        LoadPos = this.transform.position;
     }
 
-    public void OnEndDrag(PointerEventData eventData)
+    private void Update()
     {
-        Debug.Log("OnEndDrag");
+        if(isBeingHeld)
+        {
+            Vector2 mousePos;
+            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            this.gameObject.transform.position =
+                new Vector2(mousePos.x - startPosX, mousePos.y - startPosY);
+        }
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    private void OnMouseDown()
     {
-        Debug.Log("OnPointerDown");
+        if(CompareTag("Item"))
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+
+                spriteRenderer.color = new Color(1f, 1f, 1f, .5f);
+
+                mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+                startPosX = mousePos.x - this.transform.position.x;
+                startPosY = mousePos.y - this.transform.position.y;
+
+                isBeingHeld = true;
+            }
+        }
     }
 
-    //Item Drop 했을 때 
-    public void OnDrop(PointerEventData eventData)
+    private void OnMouseUp()
     {
-        throw new System.NotImplementedException();
+        spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
+        isBeingHeld = false;
+
+        if (isInLine)
+        {
+            /*this.gameObject.transform.position
+                            = new Vector3(this.gameObject.transform.localPosition.x, SpaceObjPosY, -1f);*/
+
+            this.gameObject.transform.position
+            = new Vector3(mousePos.x, SpaceObjPosY, -1f);
+
+            // 쏙 들어가는거
+            //transform.position = SpaceObjPos;
+        }
+        else this.gameObject.transform.position = LoadPos;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("SpaceObj"))
+        {
+            isInLine = true;
+            //SpaceObjPos = collision.transform.position;
+            SpaceObjPosY = collision.transform.position.y;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.CompareTag("SpaceObj"))
+        {
+            isInLine = false;
+        }
     }
 }
+

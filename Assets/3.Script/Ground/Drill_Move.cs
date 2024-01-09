@@ -41,23 +41,26 @@ public class Drill_Move : MonoBehaviour
 
     private void Update()
     {
-            //Pipe Draw
-            LineRender.instance.GetLineRenderer().SetPosition(0, transform.position);
-
-
-            pipeLine.SetPosition(1, transform.position);
-            if (Vector3.Distance(transform.position, endPos) <= 0.1f)
-            {
-                if (LineRender.instance.Drill != null)
-                {
-                    LineRender.instance.Drill.GetComponent<BoxCollider2D>().enabled = true;
-                    LineRender.instance.Drill.transform.GetChild(0).transform.GetComponent<BoxCollider2D>().enabled = true;
-                    LineRender.instance.Drill = null;
-                }
-            }
-        
+        PipeDraw();
     }
 
+    private void PipeDraw()
+    {
+        //Pipe Draw
+
+        LineRender.instance.GetLineRenderer().SetPosition(0, transform.position);
+
+        pipeLine.SetPosition(1, transform.position);
+        if (Vector3.Distance(transform.position, endPos) <= 0.1f)
+        {
+            if (LineRender.instance.Drill != null)
+            {
+                LineRender.instance.Drill.GetComponent<BoxCollider2D>().enabled = true;
+                LineRender.instance.Drill.transform.GetChild(0).transform.GetComponent<BoxCollider2D>().enabled = true;
+                LineRender.instance.Drill = null;
+            }
+        }
+    }
 
 
     public IEnumerator drill_co()

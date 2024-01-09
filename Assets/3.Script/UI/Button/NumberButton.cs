@@ -23,6 +23,9 @@ public class NumberButton : MonoBehaviour
 
     private void OnButtonClick()
     {
+        CalculateMoney.Instance.CalculateResult(buttonNumber);
+
+
         Debug.Log("¼ýÀÚ°ª: " + buttonNumber);
     }
 

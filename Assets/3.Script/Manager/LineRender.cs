@@ -56,7 +56,7 @@ public class LineRender : MonoBehaviour
             {
                 isDrag = true;
                 
-                Debug.Log(hit.transform.name);
+                //Debug.Log(hit.transform.name);
                 if (hit.transform.CompareTag("Plus") || hit.transform.CompareTag("Endpos"))
                 {
                     trajectoryLine.enabled = true;
@@ -66,30 +66,38 @@ public class LineRender : MonoBehaviour
                     startPos = new Vector3(hit.transform.position.x, hit.transform.position.y, -1f);
                 }
             }
-            if (Input.GetMouseButton(0))
+            else if (Input.GetMouseButton(0))
             {
-                trajectoryLine.SetPosition(1, new Vector3(mousePos.x, mousePos.y, -1f));
-                if (endSprite == null)
+                if (hit.transform.CompareTag("Plus") || hit.transform.CompareTag("Endpos"))
                 {
-                    endSprite = Instantiate(endSpritePrefebs, new Vector3(mousePos.x, mousePos.y, -1f), Quaternion.identity); 
-                }
-                else
-                {
-                    endSprite.transform.position = new Vector3(mousePos.x, mousePos.y, -1f);
+                    trajectoryLine.SetPosition(1, new Vector3(mousePos.x, mousePos.y, -1f));
+                    if (endSprite == null)
+                    {
+                        endSprite = Instantiate(endSpritePrefebs, new Vector3(mousePos.x, mousePos.y, -1f), Quaternion.identity);
+                    }
+                    else
+                    {
+                        endSprite.transform.position = new Vector3(mousePos.x, mousePos.y, -1f);
+                    }
                 }
             }
-            if (Input.GetMouseButtonUp(0))
+
+            else if (Input.GetMouseButtonUp(0))
             {
                 isDrag = false;
 
-                if (endSprite != null)
+                if (hit.transform.CompareTag("Plus") || hit.transform.CompareTag("Endpos"))
                 {
-                    endPos = endSprite.transform.position;
-                    Instantiate(endSprite, endPos, Quaternion.identity);         //GameObject Clone   //endSprit 유지 
-                    Destroy(endSprite);
-                    Drill = Instantiate(drills, startPos, drills.transform.rotation);
-                    IsMouseUp = true;
+                    if (endSprite != null)
+                    {
+                        endPos = endSprite.transform.position;
+                        Instantiate(endSprite, endPos, Quaternion.identity);         //GameObject Clone   //endSprit 유지 
+                        Destroy(endSprite);
+                        Drill = Instantiate(drills, startPos, drills.transform.rotation);
+                        IsMouseUp = true;
+                    }
                 }
+                   
             }
         }
 

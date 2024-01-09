@@ -18,7 +18,7 @@ public class HorsePatroling : MonoBehaviour
         currentPoint = pointB.transform;
         anim.SetBool("isRunning", true);
         anim2.SetBool("isRunning", true);
-
+        Physics2D.IgnoreLayerCollision(7, 8, true);
     }
 
     private void Update()
