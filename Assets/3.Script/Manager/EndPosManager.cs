@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class EndPosManager : MonoBehaviour
     [SerializeField] private LineRenderer oilLine;
 
     [SerializeField] private Vector3 startPos;
+    [SerializeField] private EndPosManager startEPM;
     [SerializeField] private Vector3 endPos;
 
     private float dist;
@@ -20,9 +22,11 @@ public class EndPosManager : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     float newheight;
+    Coroutine oil_wait_co = null;
 
     private void Start()
     {
+        //Drill_Move.OnArriveDrill += Drill_Move_OnArriveDrill;
         oilLine.enabled = false;
         startPos = LineRender.instance.GetStartSpritgePos();
         endPos = LineRender.instance.GetEndSpritgePos();
@@ -36,18 +40,50 @@ public class EndPosManager : MonoBehaviour
         //Colider
         edgeCollider2D = this.GetComponent<EdgeCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
     }
+
+    /*    private void Drill_Move_OnArriveDrill(object sender, EventArgs e)
+        {
+            OilPumb();
+        }
+
+        private void OilPumb()
+        {
+            StartCoroutine(OilPumpCo_Co());
+        }*/
+
+
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("OilSpot") && LineRender.instance.IsMouseUp)
-        {
+        Debug.Log(collision.tag);
 
-            oilLine.enabled = true;
-            StartCoroutine(OilPumpCo());
-            //Debug.Log(oilLine.enabled);
-           // Debug.Log(collision.CompareTag("OilSpot"));
+        if (LineRender.instance.IsMouseUp && collision.CompareTag("OilSpot"))
+        {
+            StartCoroutine(OilPumpCo_Co());
         }
+
+        if (collision.CompareTag("Finish"))
+        {
+            if (oil_wait_co == null) {
+                oil_wait_co = collision.GetComponent<EndPosManager>().StartCoroutine(OilPumpCo_Co());
+            }
+            
+        }
+    }
+
+    public IEnumerator OilPumpCo_Co()
+    {
+        Debug.Log($"OilPumpCo_Co");
+        yield return new WaitForSeconds(8f);
+        oil_wait_co = null;
+        
+
+        oilLine.enabled = true;
+        StartCoroutine(OilPumpCo());
+        
     }
 
     private IEnumerator OilPumpCo()
@@ -60,16 +96,25 @@ public class EndPosManager : MonoBehaviour
             counter += .2f / lineRenderSpeed;            //Oil 올라오는 속도
             x = Mathf.Lerp(dist, 0, counter);
             Vector3 pointAlongLine = x * Vector3.Normalize(endPos - startPos) + startPos;
+
+/*            List<Vector3> posList = LineRender.instance.oilPosList;
+            posList.Reverse();
+            Debug.Log(posList.Count);
+            oilLine.positionCount = posList.Count;
+            oilLine.SetPositions(posList.ToArray());*/
             oilLine.SetPosition(1, pointAlongLine);
             SetEdgeColider();
             yield return new WaitForSeconds(0.2f);
 
-            if (Mathf.Abs(x)<0.01f)
+
+            if (Mathf.Abs(x) < 0.05f)
             {
                 yield break;
             }
         }
     }
+
+    
    
     public void SetEdgeColider()        //LineRender Collider
     {

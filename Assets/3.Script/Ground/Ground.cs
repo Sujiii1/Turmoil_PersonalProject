@@ -79,7 +79,7 @@ public class Ground : MonoBehaviour
         makeSprite();
         Destroy(gameObject.GetComponent<PolygonCollider2D>());
 
-        yield return null;
+        yield return new WaitForSeconds(0.2f);
 
         while (true)
         {
@@ -90,6 +90,7 @@ public class Ground : MonoBehaviour
             }
             yield return null;
         }
+
         isStartco = false;
     }
     #endregion

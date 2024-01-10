@@ -1,11 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Drill_Move : MonoBehaviour
 {
+    public static EventHandler OnArriveDrill;
+    [SerializeField] private bool isCheckOil = false;
+
     public GameObject desArea;
     public bool isWork = true;
+    private bool isWorkDone = false;
     [SerializeField] private bool isCol = false;
 
     [SerializeField] private Vector3 startPos;
@@ -41,7 +46,11 @@ public class Drill_Move : MonoBehaviour
 
     private void Update()
     {
-        PipeDraw();
+        if(!isWorkDone)
+        {
+            PipeDraw();
+        }
+        
     }
 
     private void PipeDraw()
@@ -49,16 +58,42 @@ public class Drill_Move : MonoBehaviour
         //Pipe Draw
 
         LineRender.instance.GetLineRenderer().SetPosition(0, transform.position);
-
         pipeLine.SetPosition(1, transform.position);
         if (Vector3.Distance(transform.position, endPos) <= 0.1f)
         {
             if (LineRender.instance.Drill != null)
             {
+                Debug.Log("도착!");
+/*                if (isCheckOil)
+                {
+                    Debug.Log("오일 발견");
+                    OnArriveDrill?.Invoke(this, EventArgs.Empty);
+                    isCheckOil = false;
+                }*/
+
+                gameObject.GetComponent<SpriteRenderer>().enabled = false;
                 LineRender.instance.Drill.GetComponent<BoxCollider2D>().enabled = true;
                 LineRender.instance.Drill.transform.GetChild(0).transform.GetComponent<BoxCollider2D>().enabled = true;
                 LineRender.instance.Drill = null;
+                isWorkDone = true;
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("OilSpot"))
+        {
+            isCheckOil = true;
+        }
+
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("OilSpot"))
+        {
+            isCheckOil = false;
         }
     }
 

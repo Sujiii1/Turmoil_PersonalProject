@@ -7,9 +7,29 @@ public class NumberButton : MonoBehaviour
 {
     public int buttonNumber; // 버튼에 할당된 숫자값
     private Button button;
+    [SerializeField] GameObject activeObj;
+
+/*    public static NumberButton Instance = null;
+
+    private void Awake()
+    {
+        #region [SingleTone] 
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        #endregion
+    }*/
 
     private void Start()
     {
+        //activeObj.SetActive(false);
         button = GetComponent<Button>();
         if (button != null)
         {
@@ -21,10 +41,18 @@ public class NumberButton : MonoBehaviour
         }
     }
 
-    private void OnButtonClick()
+    /*[오브젝트 활성화 & 드래그드랍]
+        1. 버튼을 눌렀을 때.
+        2. 오브젝트 활성화
+        3. 오브젝트 드래그앤드랍
+     */
+
+    public void OnButtonClick()
     {
         CalculateMoney.Instance.CalculateResult(buttonNumber);
 
+        GameObject clone = Instantiate(activeObj, transform.position, Quaternion.identity);
+        //activeObj.SetActive(true);
 
         Debug.Log("숫자값: " + buttonNumber);
     }
@@ -33,4 +61,6 @@ public class NumberButton : MonoBehaviour
     {
         buttonNumber = number;
     }
+
+
 }
