@@ -22,7 +22,7 @@ public class EndPosManager : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     float newheight;
-    Coroutine oil_wait_co = null;
+    bool is_oil_co = false;
 
     private void Start()
     {
@@ -40,84 +40,64 @@ public class EndPosManager : MonoBehaviour
         //Colider
         edgeCollider2D = this.GetComponent<EdgeCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-
     }
-
-    /*    private void Drill_Move_OnArriveDrill(object sender, EventArgs e)
-        {
-            OilPumb();
-        }
-
-        private void OilPumb()
-        {
-            StartCoroutine(OilPumpCo_Co());
-        }*/
-
-
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.tag);
+        //Debug.Log(collision.tag);
 
         if (LineRender.instance.IsMouseUp && collision.CompareTag("OilSpot"))
         {
             StartCoroutine(OilPumpCo_Co());
+            LineRender.instance.IsMouseUp = false;
         }
 
         if (collision.CompareTag("Finish"))
         {
-            if (oil_wait_co == null) {
-                oil_wait_co = collision.GetComponent<EndPosManager>().StartCoroutine(OilPumpCo_Co());
+            edgeCollider2D.enabled = false;
+            EndPosManager epm = collision.GetComponent<EndPosManager>();
+            if (!epm.is_oil_co) 
+            {
+                epm.StartCoroutine(epm.OilPumpCo_Co());
             }
-            
         }
     }
 
     public IEnumerator OilPumpCo_Co()
     {
-        Debug.Log($"OilPumpCo_Co");
+        is_oil_co = true;
+        edgeCollider2D.enabled = false;
+
+        Debug.Log($"OilPumpCo_Co" + gameObject.name);
         yield return new WaitForSeconds(8f);
-        oil_wait_co = null;
-        
 
         oilLine.enabled = true;
         StartCoroutine(OilPumpCo());
-        
     }
 
     private IEnumerator OilPumpCo()
     {
         float x = 0;
-
-        //Oil Value 가 min<0 일 때,
         while (true)
         {
             counter += .2f / lineRenderSpeed;            //Oil 올라오는 속도
             x = Mathf.Lerp(dist, 0, counter);
-            Vector3 pointAlongLine = x * Vector3.Normalize(endPos - startPos) + startPos;
-
-/*            List<Vector3> posList = LineRender.instance.oilPosList;
-            posList.Reverse();
-            Debug.Log(posList.Count);
-            oilLine.positionCount = posList.Count;
-            oilLine.SetPositions(posList.ToArray());*/
-            oilLine.SetPosition(1, pointAlongLine);
-            SetEdgeColider();
-            yield return new WaitForSeconds(0.2f);
-
-
             if (Mathf.Abs(x) < 0.05f)
             {
+                SetEdgeColider();
+                is_oil_co = false;
                 yield break;
             }
+            Vector3 pointAlongLine = x * Vector3.Normalize(endPos - startPos) + startPos;
+            oilLine.SetPosition(1, pointAlongLine);
+            
+            yield return new WaitForSeconds(0.2f);
         }
     }
 
-    
-   
     public void SetEdgeColider()        //LineRender Collider
     {
+        edgeCollider2D.enabled = true;
         List<Vector2> edges = new List<Vector2>();
 
         float original_x = oilLine.GetPosition(0).x;            //기본 위치값 0

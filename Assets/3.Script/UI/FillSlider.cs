@@ -17,7 +17,6 @@ public class FillSlider : MonoBehaviour
         fill.fillAmount = 1;
     }
 
-
     private void Update()
     {
         if (Input.GetMouseButton(2))

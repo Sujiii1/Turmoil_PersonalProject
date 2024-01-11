@@ -41,26 +41,28 @@ public class NumberButton : MonoBehaviour
         }
     }
 
-    /*[오브젝트 활성화 & 드래그드랍]
-        1. 버튼을 눌렀을 때.
-        2. 오브젝트 활성화
-        3. 오브젝트 드래그앤드랍
-     */
-
     public void OnButtonClick()
     {
+        if (!button.interactable) return;
+
+        button.interactable = false;
         CalculateMoney.Instance.CalculateResult(buttonNumber);
 
         GameObject clone = Instantiate(activeObj, transform.position, Quaternion.identity);
         //activeObj.SetActive(true);
 
-        Debug.Log("숫자값: " + buttonNumber);
+        StartCoroutine(ButtonDelay());
+        
+    }
+    
+    private IEnumerator ButtonDelay()
+    {
+        yield return new WaitForSeconds(0.2f);
+        button.interactable = true;
     }
 
     public void SetButtonNumber(int number)
     {
         buttonNumber = number;
     }
-
-
 }
