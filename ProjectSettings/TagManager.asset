@@ -11,6 +11,8 @@ TagManager:
   - OilSpot
   - SpaceObj
   - Item
+  - APoint
+  - BPoint
   layers:
   - Default
   - TransparentFX
@@ -27,7 +29,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - OilSpot
   - 
   - 
   - 

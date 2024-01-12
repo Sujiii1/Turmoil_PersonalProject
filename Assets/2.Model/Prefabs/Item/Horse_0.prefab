@@ -358,7 +358,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2107098683690941232}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -387,6 +387,7 @@ MonoBehaviour:
   LoadPos: {x: 0, y: 0, z: 0}
   isBeingHeld: 1
   isInLine: 1
+  SpaceObjPosY: -0.422
 --- !u!114 &2107098683690941245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,11 +400,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ae28445b8c97fe48b03fa78e2561a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointA: {fileID: 6154210918278348240, guid: c30989e7f76ce81498a3aad9c2f21e62, type: 3}
-  pointB: {fileID: 1756337968295811641, guid: b2376eba138b7a64b9b254b36205ccc1, type: 3}
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
+  rb: {fileID: 0}
   anim: {fileID: 2107098682770007442}
   anim2: {fileID: 2107098683598495032}
+  currentPoint: {fileID: 0}
   speed: 2
+  isDowser: 0
+  isHorse: 1
 --- !u!1 &2107098684144219773
 GameObject:
   m_ObjectHideFlags: 0

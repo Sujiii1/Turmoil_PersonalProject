@@ -48,7 +48,7 @@ public class EndPosManager : MonoBehaviour
 
         if (LineRender.instance.IsMouseUp && collision.CompareTag("OilSpot"))
         {
-            StartCoroutine(OilPumpCo_Co());
+            StartCoroutine(OilPumpCo_Co(collision.GetComponent<FillSlider>()));
             LineRender.instance.IsMouseUp = false;
         }
 
@@ -58,19 +58,26 @@ public class EndPosManager : MonoBehaviour
             EndPosManager epm = collision.GetComponent<EndPosManager>();
             if (!epm.is_oil_co) 
             {
-                epm.StartCoroutine(epm.OilPumpCo_Co());
+                epm.StartCoroutine(epm.OilPumpCo_Co(collision.GetComponent<FillSlider>()));
             }
         }
+
+        if (collision.CompareTag("Plus"))
+        {
+            Debug.Log("오일 뽑자");
+            collision.transform.parent.GetComponent<PressedOilFill>().isNowFilling = true;
+        }
+
     }
 
-    public IEnumerator OilPumpCo_Co()
+    public IEnumerator OilPumpCo_Co(FillSlider a)
     {
         is_oil_co = true;
         edgeCollider2D.enabled = false;
 
         Debug.Log($"OilPumpCo_Co" + gameObject.name);
         yield return new WaitForSeconds(8f);
-
+        a.isNowPressing = true;
         oilLine.enabled = true;
         StartCoroutine(OilPumpCo());
     }
@@ -80,7 +87,8 @@ public class EndPosManager : MonoBehaviour
         float x = 0;
         while (true)
         {
-            counter += .2f / lineRenderSpeed;            //Oil 올라오는 속도
+            //원래 0.2f 속도였음 근데 오중근왈 좀 너무 느림 0.5는 해야함
+            counter += 1f / lineRenderSpeed;            //Oil 올라오는 속도
             x = Mathf.Lerp(dist, 0, counter);
             if (Mathf.Abs(x) < 0.05f)
             {
@@ -111,7 +119,7 @@ public class EndPosManager : MonoBehaviour
         edgeCollider2D.SetPoints(edges);
     }
 
-    //StartPos에 endCollider가 닿았을 때 Pressed의 Slider 작동
+    /*//StartPos에 endCollider가 닿았을 때 Pressed의 Slider 작동
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Plus"))
@@ -122,5 +130,5 @@ public class EndPosManager : MonoBehaviour
 
             newheight = Mathf.Sin(Time.time);
         }
-    }
+    }*/
 }

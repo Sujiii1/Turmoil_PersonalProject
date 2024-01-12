@@ -12,7 +12,7 @@ public class DragDrop : MonoBehaviour
 
     [SerializeField] private bool isBeingHeld = true;
     public bool isInLine = true;
-    float SpaceObjPosY;
+    [SerializeField] private float SpaceObjPosY;
 
     HorsePatroling horsePatroling;
 
@@ -67,7 +67,7 @@ public class DragDrop : MonoBehaviour
         if (isInLine)
         {
             mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
+            
             this.gameObject.transform.position
                         = new Vector3(mousePos.x, SpaceObjPosY, -1f);
         }
@@ -90,11 +90,11 @@ public class DragDrop : MonoBehaviour
         if (isInLine)
         {
             mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
+            GetComponent<Rigidbody2D>().simulated = true;
             this.gameObject.transform.position
                         = new Vector3(mousePos.x, SpaceObjPosY, -1f);
         }
-        horsePatroling.HorsePos();
+        //horsePatroling.HorsePos();
     }
 }
 

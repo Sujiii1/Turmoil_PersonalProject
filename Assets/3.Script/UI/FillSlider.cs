@@ -9,7 +9,9 @@ public class FillSlider : MonoBehaviour
     public Image fill;
  // public float reduceSpeed;
 
-    private int currentValue;
+    private float currentValue;
+
+    public bool isNowPressing;
 
     private void Start()
     {
@@ -19,33 +21,34 @@ public class FillSlider : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButton(2))
+        if(isNowPressing)
         {
-            Deduct(1);
+            Deduct(0.05f);
         }
-
     }
-    /*private void OnTriggerEnter2D(Collider2D collision)
+
+
+/*    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Endpos"))
+        if (collision.CompareTag("Drill"))
         {
-            Add(10);
-            Deduct(3);
+            Debug.Log("Endpos" + collision.name);
+            isNowPressing = true;
         }
     }*/
 
-   /* public void Add(int i)
-    {
-        //현재 Value 증가
-        currentValue += i;
+    /* public void Add(int i)
+     {
+         //현재 Value 증가
+         currentValue += i;
 
-        if (currentValue > maxValue)
-            currentValue = maxValue;
+         if (currentValue > maxValue)
+             currentValue = maxValue;
 
-        fill.fillAmount = (float)currentValue / maxValue;
+         fill.fillAmount = (float)currentValue / maxValue;
 
-    }*/
-    public void Deduct(int i)
+     }*/
+    public void Deduct(float i)
     {
         //현재 Value 감소
         currentValue -= i;
