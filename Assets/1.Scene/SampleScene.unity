@@ -2386,6 +2386,7 @@ GameObject:
   - component: {fileID: 1005864796}
   - component: {fileID: 1005864795}
   - component: {fileID: 1005864794}
+  - component: {fileID: 1005864797}
   m_Layer: 15
   m_Name: Fill
   m_TagString: OilSpot
@@ -2480,6 +2481,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005864792}
   m_CullTransparentMesh: 1
+--- !u!114 &1005864797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005864792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbde4a7717811964596c66dbcbcb032c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxValue: 1500
+  fill: {fileID: 1005864795}
+  isNowPressing: 0
 --- !u!1 &1039960738
 GameObject:
   m_ObjectHideFlags: 0
@@ -4281,7 +4297,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1829137957}
-  - component: {fileID: 1829137958}
   m_Layer: 0
   m_Name: Type_m1
   m_TagString: Untagged
@@ -4310,21 +4325,6 @@ RectTransform:
   m_AnchoredPosition: {x: 436, y: -252}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1829137958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829137956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbde4a7717811964596c66dbcbcb032c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxValue: 1500
-  fill: {fileID: 1005864795}
-  isNowPressing: 0
 --- !u!1 &1914273717
 GameObject:
   m_ObjectHideFlags: 0

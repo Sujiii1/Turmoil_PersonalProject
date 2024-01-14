@@ -90,7 +90,11 @@ public class DragDrop : MonoBehaviour
         if (isInLine)
         {
             mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            GetComponent<Rigidbody2D>().simulated = true;
+            if(GetComponent<Rigidbody2D>() != null)
+            {
+                GetComponent<Rigidbody2D>().simulated = true;
+            }
+            
             this.gameObject.transform.position
                         = new Vector3(mousePos.x, SpaceObjPosY, -1f);
         }
