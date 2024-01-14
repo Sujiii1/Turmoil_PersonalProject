@@ -23,6 +23,8 @@ public class EndPosManager : MonoBehaviour
 
     float newheight;
     bool is_oil_co = false;
+    bool isCanPressed = false;
+
 
     private void Start()
     {
@@ -42,6 +44,11 @@ public class EndPosManager : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    private void Update()
+    {
+        Debug.Log("isCanPressed = " + isCanPressed);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Debug.Log(collision.tag);
@@ -49,6 +56,7 @@ public class EndPosManager : MonoBehaviour
         if (LineRender.instance.IsMouseUp && collision.CompareTag("OilSpot"))
         {
             StartCoroutine(OilPumpCo_Co(collision.GetComponent<FillSlider>()));
+            
             LineRender.instance.IsMouseUp = false;
         }
 
@@ -62,7 +70,7 @@ public class EndPosManager : MonoBehaviour
             }
         }
 
-        if (collision.CompareTag("Plus"))
+        if (collision.CompareTag("Plus") && isCanPressed)
         {
             Debug.Log("ø¿¿œ ªÃ¿⁄");
             collision.transform.parent.GetComponent<PressedOilFill>().isNowFilling = true;
@@ -73,11 +81,16 @@ public class EndPosManager : MonoBehaviour
     public IEnumerator OilPumpCo_Co(FillSlider a)
     {
         is_oil_co = true;
+        isCanPressed = true;
         edgeCollider2D.enabled = false;
 
         Debug.Log($"OilPumpCo_Co" + gameObject.name);
         yield return new WaitForSeconds(8f);
-        a.isNowPressing = true;
+        if(a != null)
+        {
+            a.isNowPressing = true;
+        }
+
         oilLine.enabled = true;
         StartCoroutine(OilPumpCo());
     }
