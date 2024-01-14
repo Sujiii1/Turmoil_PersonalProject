@@ -9,6 +9,7 @@ public class HorsePatroling : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator anim;
     [SerializeField] private Animator anim2;
+    [SerializeField] private Animator anim3;
     [SerializeField] private Animator dowserAnimator;
     [SerializeField] private Transform currentPoint;
     public float speed;
@@ -34,6 +35,7 @@ public class HorsePatroling : MonoBehaviour
         {
             anim.SetBool("isRunning", true);
             anim2.SetBool("isRunning", true);
+            anim.SetBool("isQuest", true);
         }
         Physics2D.IgnoreLayerCollision(7, 8, true);
     }
@@ -71,13 +73,6 @@ public class HorsePatroling : MonoBehaviour
                 DetectOilSpot();
             }
         }
-
-        
-
-
-
-
-        //Vector2 point = currentPoint.position - transform.position;
 
         if (currentPoint == pointB.transform)
         {
@@ -121,10 +116,10 @@ public class HorsePatroling : MonoBehaviour
         transform.localScale = localScale;
     }
 
-    private void OnDrawGizmos()
+/*    private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(pointA.transform.position, 0.5f);
         Gizmos.DrawWireSphere(pointB.transform.position, 0.5f);
         Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
-    }
+    }*/
 }

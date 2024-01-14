@@ -131,7 +131,7 @@ Transform:
   m_LocalScale: {x: 0.4144186, y: 0.39337838, z: 1}
   m_Children: []
   m_Father: {fileID: 2107098683690941235}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2107098683379062803
 SpriteRenderer:
@@ -172,13 +172,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1614281475
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 6a78fad801720b54b8d0aeadd66ce93e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 1.72, y: 0.23}
+  m_Size: {x: 1.72, y: 0.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -214,7 +214,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2107098683690941235}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2107098683598495035
 SpriteRenderer:
@@ -319,9 +319,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2107098682770007452}
+  - {fileID: 2107098683379062801}
   - {fileID: 2107098684144219774}
   - {fileID: 2107098683598495034}
-  - {fileID: 2107098683379062801}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -426,6 +426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 168975736ad064945bf423b1c8c2054d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFillOil: 0
 --- !u!1 &2107098684144219773
 GameObject:
   m_ObjectHideFlags: 0

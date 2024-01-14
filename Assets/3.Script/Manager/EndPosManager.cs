@@ -131,17 +131,4 @@ public class EndPosManager : MonoBehaviour
         }
         edgeCollider2D.SetPoints(edges);
     }
-
-    /*//StartPos에 endCollider가 닿았을 때 Pressed의 Slider 작동
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.CompareTag("Plus"))
-        {
-            Vector2 size = spriteRenderer.size;
-            Vector2 newSize = new Vector2(size.x, newheight);
-            spriteRenderer.size = newSize;
-
-            newheight = Mathf.Sin(Time.time);
-        }
-    }*/
 }

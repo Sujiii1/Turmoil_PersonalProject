@@ -470,7 +470,6 @@ MonoBehaviour:
   oilSprite: {fileID: 3556322310342221699}
   isNowFilling: 0
   currentOilValue: 0
-  fillSlider: {fileID: 0}
 --- !u!61 &-8302101458857848520
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -8,24 +8,12 @@ public class NumberButton : MonoBehaviour
     public int buttonNumber; // 버튼에 할당된 숫자값
     private Button button;
     [SerializeField] GameObject activeObj;
-
-/*    public static NumberButton Instance = null;
+   // [SerializeField] Animator dowserquest;
 
     private void Awake()
     {
-        #region [SingleTone] 
-        if (Instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        #endregion
-    }*/
+       // dowserquest = GetComponent<Animator>();
+    }
 
     private void Start()
     {
@@ -49,7 +37,6 @@ public class NumberButton : MonoBehaviour
         CalculateMoney.Instance.CalculateResult(buttonNumber);
 
         GameObject clone = Instantiate(activeObj, transform.position, Quaternion.identity);
-        //activeObj.SetActive(true);
 
         StartCoroutine(ButtonDelay());
         
@@ -57,7 +44,7 @@ public class NumberButton : MonoBehaviour
     
     private IEnumerator ButtonDelay()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.05f);
         button.interactable = true;
     }
 
