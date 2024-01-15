@@ -11,7 +11,10 @@ GameObject:
   - component: {fileID: 8018723415356576302}
   - component: {fileID: 8018723415356576303}
   - component: {fileID: 2505120204609180049}
+  - component: {fileID: -2715172385152377152}
   - component: {fileID: 4049227905377256714}
+  - component: {fileID: 8862205039672966450}
+  - component: {fileID: 2217152200397790140}
   m_Layer: 0
   m_Name: OilStorge_0
   m_TagString: Untagged
@@ -99,9 +102,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DragObj: {fileID: 8018723415356576720}
   LoadPos: {x: 0, y: 0, z: 0}
+  isOilStorage: 1
+  isOverPresssed: 0
+  isFinish: 0
   isBeingHeld: 1
   isInLine: 1
   SpaceObjPosY: -0.53
+  oilStorage: {fileID: 0}
+--- !u!114 &-2715172385152377152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8018723415356576720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f81082e2034038469ac0de80fc1201e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressedOil: {fileID: 0}
 --- !u!114 &4049227905377256714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,6 +136,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oilSaveSprite: {fileID: 8018723415356576303}
   currentOilValue: 0
+--- !u!61 &8862205039672966450
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8018723415356576720}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.75, y: 1.45}
+    newSize: {x: 3.75, y: 1.45}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.75, y: 1.45}
+  m_EdgeRadius: 0
+--- !u!50 &2217152200397790140
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8018723415356576720}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &8018723416200360011
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +259,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 3.37, y: 0.48}
+  m_Size: {x: 3.37, y: 0.93}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

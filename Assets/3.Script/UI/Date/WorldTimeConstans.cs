@@ -7,7 +7,7 @@ namespace WorldTime
 {
     public static class WorldTimeConstans
     {
-        public const int MinutesInDay = 1440;
+        public const int MinutesInDay = 1440/2;
     }
 }
 

@@ -9,7 +9,7 @@ namespace WorldTime
     public class WorldTimeScript : MonoBehaviour
     {
         public event EventHandler<TimeSpan> WorldTimeChanged;
-        [SerializeField] private float _dayLength = 360f; //in second
+        [SerializeField] private float _dayLength = 1440f; //in second
 
         public TimeSpan _currentTime;             //using System;
         public float _minuteLength => _dayLength / WorldTimeConstans.MinutesInDay;
@@ -21,7 +21,7 @@ namespace WorldTime
 
         private IEnumerator AddMinute()
         {
-            _currentTime += TimeSpan.FromMinutes(1);
+            _currentTime += TimeSpan.FromMinutes(5);
             WorldTimeChanged?.Invoke(this, _currentTime);
             yield return new WaitForSeconds(_minuteLength);
             StartCoroutine(AddMinute());

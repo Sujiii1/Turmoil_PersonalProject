@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class HorsePatroling : MonoBehaviour
 {
-    public GameObject pointA;
-    public GameObject pointB;
+    private Vector3 BasepointA;
+    private Vector3 BasepointB;
+
+    [SerializeField] private Vector3 pointA;
+    [SerializeField] private Vector3 pointB;
+
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator anim;
     [SerializeField] private Animator anim2;
-    [SerializeField] private Animator anim3;
+   // [SerializeField] private Animator anim3;
     [SerializeField] private Animator dowserAnimator;
-    [SerializeField] private Transform currentPoint;
+    [SerializeField] private Vector3 currentPoint;
     public float speed;
 
     [SerializeField] private bool isDowser;
@@ -21,23 +25,36 @@ public class HorsePatroling : MonoBehaviour
     private float timer = 3f;
     private bool isFindOil = false;
 
+    private bool isNoHavePoint = false;
+    private bool isRight = true;
+
+    /*    private void Awake()
+        {
+            pointA = GameObject.FindGameObjectWithTag("APoint");
+            pointB = GameObject.FindGameObjectWithTag("BPoint");
+        }*/
+
     private void Awake()
     {
-        pointA = GameObject.FindGameObjectWithTag("APoint");
-        pointB = GameObject.FindGameObjectWithTag("BPoint");
+        pointA = new Vector3(-7f, -1.2f, -1f);
+        pointB = new Vector3(8f, -1.2f, -1f);
+
+        BasepointA = pointA;
+        BasepointB = pointB;
     }
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        currentPoint = pointB.transform;
+        currentPoint = pointB;
         if(isHorse)
         {
             anim.SetBool("isRunning", true);
             anim2.SetBool("isRunning", true);
-            anim.SetBool("isQuest", true);
+           // anim.SetBool("isQuest", true);
         }
         Physics2D.IgnoreLayerCollision(7, 8, true);
+        Physics2D.IgnoreLayerCollision(7, 7, true);
     }
 
     private void Update()
@@ -54,7 +71,7 @@ public class HorsePatroling : MonoBehaviour
 
     public void HorsePos()
     {
-        if (isFindOil)
+        if (isFindOil || isNoHavePoint)
         {
             rb.velocity = Vector2.zero;
             return;
@@ -74,23 +91,49 @@ public class HorsePatroling : MonoBehaviour
             }
         }
 
-        if (currentPoint == pointB.transform)
+        if (currentPoint == pointB)
         {
+            isRight = true;
             rb.velocity = new Vector2(speed, 0);
         }
-        else if (currentPoint == pointA.transform)
+        else if (currentPoint == pointA)
         {
+            isRight = false;
             rb.velocity = new Vector2(-speed, 0);
         }
-        if (Vector2.Distance(transform.position, currentPoint.position) <= 1.0f && currentPoint == pointB.transform)
+
+        if (Vector2.Distance(transform.position, currentPoint) <= 1.0f && currentPoint == pointB)
         {
-            Filp();
-            currentPoint = pointA.transform;
+            if(isRight)
+            {
+                Filp();
+                currentPoint = pointA;
+            }
         }
-        if (Vector2.Distance(transform.position, currentPoint.position) <= 1.0f && currentPoint == pointA.transform)
+        else if (Vector2.Distance(transform.position, BasepointB) <= 1.0f)
         {
-            Filp();
-            currentPoint = pointB.transform;
+            if (isRight)
+            {
+                Filp();
+                currentPoint = pointA;
+            }
+        }
+
+        if (Vector2.Distance(transform.position, currentPoint) <= 1.0f && currentPoint == pointA)
+        {
+            if (!isRight)
+            {
+                Filp();
+                currentPoint = pointB;
+            }
+        }
+        else if (Vector2.Distance(transform.position, BasepointA) <= 1.0f)
+        {
+            if (!isRight)
+            {
+                Filp();
+                currentPoint = pointB;
+            }
         }
     }
 
@@ -116,10 +159,62 @@ public class HorsePatroling : MonoBehaviour
         transform.localScale = localScale;
     }
 
-/*    private void OnDrawGizmos()
+
+
+    public void ChangeAPoint(Vector3 newAPoint)
     {
-        Gizmos.DrawWireSphere(pointA.transform.position, 0.5f);
-        Gizmos.DrawWireSphere(pointB.transform.position, 0.5f);
-        Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
-    }*/
+        Debug.Log(pointA);
+        pointA = newAPoint;
+
+        if(!isRight)
+        {
+            currentPoint = pointA;
+        }
+        Debug.Log(pointA);
+    }
+
+    public void ChangeBPoint(Vector3 newBPoint)
+    {
+        Debug.Log(pointB);
+        pointB = newBPoint;
+
+        if(isRight)
+        {
+            currentPoint = pointB;
+        }
+        Debug.Log(pointB);
+    }
+
+    public void SetHavePoint(bool value)
+    {
+        if (value)
+        {
+            pointA = new Vector3(-7f, -1.2f, -1f);
+            pointB = new Vector3(8f, -1.2f, -1f);
+            isNoHavePoint = value;
+
+            if (isRight)
+            {
+                currentPoint = pointB;
+            }
+            else
+            {
+                currentPoint = pointA;
+            }
+        }
+        else
+        {
+            isNoHavePoint = value;
+        }
+
+
+
+    }
+
+    /*    private void OnDrawGizmos()
+        {
+            Gizmos.DrawWireSphere(pointA.transform.position, 0.5f);
+            Gizmos.DrawWireSphere(pointB.transform.position, 0.5f);
+            Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
+        }*/
 }

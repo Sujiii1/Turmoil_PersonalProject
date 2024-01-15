@@ -17,6 +17,7 @@ public class PressedOilFill : MonoBehaviour
     private float maxOilValue = 176;
 
     [SerializeField] private float currentOilValue;
+    public float CurrentOilValue => currentOilValue;
 
     
 

@@ -25,22 +25,4 @@ public class LineStartButton : MonoBehaviour
         Debug.Log("OnButtonClick");
 
     }
-
-    
-
-  /*  public bool isSelect = false;
-
-    public void set_Select()
-    {
-        isSelect = false;
-    }
-
-    public void startDrawButton()
-    {
-        isSelect = true;
-        Debug.Log("isSelect : " + isSelect);
-        buttonPos = transform.position;
-
-        Debug.Log(gameObject.transform.position);
-    }*/
 }

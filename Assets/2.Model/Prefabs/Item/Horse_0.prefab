@@ -118,7 +118,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2107098683379062801
 Transform:
   m_ObjectHideFlags: 0
@@ -406,6 +406,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   anim: {fileID: 2107098682770007442}
   anim2: {fileID: 2107098683598495032}
+  anim3: {fileID: 0}
   dowserAnimator: {fileID: 0}
   currentPoint: {fileID: 0}
   speed: 2
@@ -427,6 +428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFillOil: 0
+  horseOil: {fileID: 2107098683379062806}
 --- !u!1 &2107098684144219773
 GameObject:
   m_ObjectHideFlags: 0

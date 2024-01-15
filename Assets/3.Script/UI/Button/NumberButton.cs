@@ -8,12 +8,7 @@ public class NumberButton : MonoBehaviour
     public int buttonNumber; // 버튼에 할당된 숫자값
     private Button button;
     [SerializeField] GameObject activeObj;
-   // [SerializeField] Animator dowserquest;
 
-    private void Awake()
-    {
-       // dowserquest = GetComponent<Animator>();
-    }
 
     private void Start()
     {

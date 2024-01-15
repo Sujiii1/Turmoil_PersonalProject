@@ -26,7 +26,9 @@ namespace WorldTime
 
         private void OnWolrdTimeChanged(object sender, TimeSpan newTime)
         {
-            _text.SetText(newTime.ToString(@"hh\:mm"));
+            // _text.SetText(newTime.ToString(@"hh\:mm"));
+            _text.SetText($" {newTime.Hours +1} / {newTime.Minutes} ");
+            //_text.SetText(newTime.Minutes.ToString(@"hh"));
         }    
     }
 }
