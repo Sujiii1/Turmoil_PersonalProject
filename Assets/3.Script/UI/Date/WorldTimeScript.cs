@@ -21,9 +21,18 @@ namespace WorldTime
 
         private IEnumerator AddMinute()
         {
-            _currentTime += TimeSpan.FromMinutes(5);
+            _currentTime += TimeSpan.FromMinutes(1);
             WorldTimeChanged?.Invoke(this, _currentTime);
             yield return new WaitForSeconds(_minuteLength);
+            if (_currentTime.Minutes > 29)
+            {
+                while(_currentTime.Minutes < 59)
+                {
+                    _currentTime += TimeSpan.FromMinutes(1);
+
+                }
+            }
+                
             StartCoroutine(AddMinute());
         }
     }

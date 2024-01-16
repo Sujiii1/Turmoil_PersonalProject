@@ -15,6 +15,10 @@ public class CalculateMoney : MonoBehaviour
     NumberButton numberButton;
     ButtonSystem buttonSystem;
 
+    public int earnings = 0;
+    public int spendings = 0;
+    public int lossMoney = 0;
+
     private void Awake()
     {
         if(Instance != null)
@@ -44,6 +48,8 @@ public class CalculateMoney : MonoBehaviour
 
         Debug.Log("Debug.Log(currentResult); : " + currentResult);
 
+        spendings -= num;
+        lossMoney = earnings + spendings;
         int nowResult = currentResult - num;
 
         fiveArray[0] = nowResult / 10000;
@@ -67,6 +73,9 @@ public class CalculateMoney : MonoBehaviour
         int currentResult = (fiveArray[0] * 10000) + (fiveArray[1] * 1000) + (fiveArray[2] * 100) + (fiveArray[3] * 10) + fiveArray[4];
 
         Debug.Log("Debug.Log(currentResult); : " + currentResult);
+
+        earnings += num;
+        lossMoney = earnings + spendings;
 
         int nowResult = currentResult + num;
 
