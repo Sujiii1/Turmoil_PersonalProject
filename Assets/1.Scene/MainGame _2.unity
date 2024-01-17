@@ -2521,6 +2521,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716840014}
   m_CullTransparentMesh: 1
+--- !u!1 &722047566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 722047568}
+  - component: {fileID: 722047567}
+  m_Layer: 0
+  m_Name: CalculateManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &722047567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722047566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be74598fc8bcfa4f8b5b8be76e3d59b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  digitTexts:
+  - {fileID: 1648950166}
+  - {fileID: 1039960740}
+  - {fileID: 943048330}
+  - {fileID: 97664303}
+  - {fileID: 78992942}
+  earnings: 0
+  spendings: 0
+  lossMoney: 0
+--- !u!4 &722047568
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722047566}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &722907686
 GameObject:
   m_ObjectHideFlags: 0
@@ -7413,7 +7465,6 @@ GameObject:
   - component: {fileID: 2134603715}
   - component: {fileID: 2134603717}
   - component: {fileID: 2134603716}
-  - component: {fileID: 2134603718}
   m_Layer: 5
   m_Name: Moeny_Check
   m_TagString: Untagged
@@ -7484,24 +7535,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2134603714}
   m_CullTransparentMesh: 1
---- !u!114 &2134603718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2134603714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2be74598fc8bcfa4f8b5b8be76e3d59b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  digitTexts:
-  - {fileID: 1648950166}
-  - {fileID: 1039960740}
-  - {fileID: 943048330}
-  - {fileID: 97664303}
-  - {fileID: 78992942}
 --- !u!1 &2135954120
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,14 +6,38 @@ using UnityEngine.SceneManagement;
 
 public class SelectMap : MonoBehaviour
 {
+    [SerializeField] private GameObject questionUI;
+    private bool isButtonDown = false;
 
-    public void LoadSceneString(string a)
+    Button button;
+
+    public void YesLoad(string a)
     {
-        Debug.Log("LoadSceneString" + a);
-        SceneManager.LoadScene(a);
+        PopUp();
+        StartCoroutine(Delay(a));
+
+        
     }
 
+    public void PopUp()
+    {
+        isButtonDown = true;
+        questionUI.SetActive(true);
+    }
 
-    //SceneManager.LoadScene("MainGame_1");
+/*    public void Yes(string a)
+    {
+        
+    }*/
+
+    private IEnumerator Delay(string a)
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(a);
+    }
+    public void NO()
+    {
+        questionUI.SetActive(false);
+    }    
 
 }

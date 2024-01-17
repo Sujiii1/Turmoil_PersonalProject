@@ -101,7 +101,7 @@ public class EndPosManager : MonoBehaviour
         while (true)
         {
             //원래 0.2f 속도였음 근데 오중근왈 좀 너무 느림 0.5는 해야함
-            counter += 1f / lineRenderSpeed;            //Oil 올라오는 속도
+            counter += 0.6f / lineRenderSpeed;            //Oil 올라오는 속도
             x = Mathf.Lerp(dist, 0, counter);
             if (Mathf.Abs(x) < 0.05f)
             {
