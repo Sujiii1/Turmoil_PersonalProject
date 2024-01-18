@@ -24,13 +24,13 @@ public class FactoryNum : MonoBehaviour
 
             if (isRight)
             {
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<HorsePatroling>().ChangeAPoint(FindMostFarPressed());
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<HorsePatroling>().SetHavePoint(false);
+                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().ChangeAPoint(FindMostFarPressed());
+                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().SetHavePoint(false);
             }
             else
             {
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<HorsePatroling>().ChangeBPoint(FindMostFarPressed());
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<HorsePatroling>().SetHavePoint(false);
+                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().ChangeBPoint(FindMostFarPressed());
+                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().SetHavePoint(false);
             }
         }
     }
@@ -42,7 +42,7 @@ public class FactoryNum : MonoBehaviour
         {
             if(i == numInt-1)
             {
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<HorsePatroling>().SetHavePoint(true);
+                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().SetHavePoint(true);
                 continue;
             }
 
@@ -50,13 +50,13 @@ public class FactoryNum : MonoBehaviour
             //나중에 null 예외처리 
             if (isRight)
             {
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<HorsePatroling>().ChangeAPoint(FindMostFarPressed());
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<HorsePatroling>().SetHavePoint(false);
+                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().ChangeAPoint(FindMostFarPressed());
+                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().SetHavePoint(false);
             }
             else
             {
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<HorsePatroling>().ChangeBPoint(FindMostFarPressed());
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<HorsePatroling>().SetHavePoint(false);
+                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().ChangeBPoint(FindMostFarPressed());
+                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().SetHavePoint(false);
             }
         }
 
@@ -70,13 +70,13 @@ public class FactoryNum : MonoBehaviour
             //나중에 null 예외처리 
             if (isRight)
             {
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<HorsePatroling>().ChangeAPoint(FindMostFarPressed());
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<HorsePatroling>().SetHavePoint(false);
+                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().ChangeAPoint(FindMostFarPressed());
+                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().SetHavePoint(false);
             }
             else
             {
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<HorsePatroling>().ChangeBPoint(FindMostFarPressed());
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<HorsePatroling>().SetHavePoint(false);
+                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().ChangeBPoint(FindMostFarPressed());
+                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().SetHavePoint(false);
             }
         }
     }
