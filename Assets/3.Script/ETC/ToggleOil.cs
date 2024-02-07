@@ -16,7 +16,6 @@ public class ToggleOil : MonoBehaviour
                 // if (oil[i] 얘가 발견된 상황이면 안숨기고, 아직 안발견된 애만 숨기기)
                 oil[i].SetActive(false);
             }
-            
         }
         else
         {

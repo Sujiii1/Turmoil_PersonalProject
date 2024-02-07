@@ -10,14 +10,14 @@ public class DragDrop : MonoBehaviour
     float startPosX;
     float startPosY;
     [SerializeField] private bool isOilStorage;
-    [SerializeField] private bool isOverPresssed = false;
+    public bool isOverPresssed = false;
     [SerializeField] private bool isFinish = false;
 
-    [SerializeField] private bool isBeingHeld = true;
+    public bool isBeingHeld = true;
     public bool isInLine = true;
     [SerializeField] private float SpaceObjPosY;
 
-    HorsePatroling horsePatroling;
+    Patroling horsePatroling;
 
     Vector3 mousePos;
 
@@ -27,7 +27,7 @@ public class DragDrop : MonoBehaviour
 
     private void Awake()
     {
-        horsePatroling = GetComponent<HorsePatroling>();
+        horsePatroling = GetComponent<Patroling>();
     }
     private void Start()
     {
@@ -48,7 +48,7 @@ public class DragDrop : MonoBehaviour
         
     }
 
-    private void ObjPos()
+    public void ObjPos()
     {
         if (isBeingHeld && !isFinish)
         {
@@ -70,6 +70,7 @@ public class DragDrop : MonoBehaviour
 
                 this.gameObject.transform.position
                             = new Vector3(mousePos.x, SpaceObjPosY, -1f);
+               
             }
         }
 
@@ -130,7 +131,6 @@ public class DragDrop : MonoBehaviour
     private void OnMouseUp()
     {
         isBeingHeld = false;
-
         if (isInLine && !isFinish && !isOilStorage)
         {
             mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -153,7 +153,6 @@ public class DragDrop : MonoBehaviour
             this.gameObject.transform.position
                         = new Vector3(mousePos.x, SpaceObjPosY, -1f);
         }
-        //horsePatroling.HorsePos();
     }
 }
 
