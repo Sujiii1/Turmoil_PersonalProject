@@ -6,6 +6,16 @@ TagManager:
   tags:
   - Ground
   - Drill
+  - Endpos
+  - Plus
+  - OilSpot
+  - SpaceObj
+  - Item
+  - APoint
+  - BPoint
+  - FindOilSpot
+  - Pressed
+  - Factory
   layers:
   - Default
   - TransparentFX
@@ -14,15 +24,15 @@ TagManager:
   - Water
   - UI
   - Ground
+  - Horse
+  - Except
+  - FillHorse
+  - Factory
   - 
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - OilSpot
   - 
   - 
   - 
@@ -45,4 +55,10 @@ TagManager:
     locked: 0
   - name: ForeGround
     uniqueID: 3186667687
+    locked: 0
+  - name: Pressed
+    uniqueID: 4060257563
+    locked: 0
+  - name: Horse
+    uniqueID: 2680685821
     locked: 0

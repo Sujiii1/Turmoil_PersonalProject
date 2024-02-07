@@ -1,0 +1,804 @@
+fileFormatVersion: 2
+guid: 16d16e48e88cc5e4fafc7fb39e190ee3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3114680014955236060
+    second: Dowser_benddown_0
+  - first:
+      213: -8166152592996351254
+    second: Dowser_benddown_1
+  - first:
+      213: -1491550299115402679
+    second: Dowser_benddown_2
+  - first:
+      213: -194427443566818248
+    second: Dowser_benddown_3
+  - first:
+      213: -3324785094992667549
+    second: Dowser_benddown_4
+  - first:
+      213: 8806456902316381138
+    second: Dowser_benddown_5
+  - first:
+      213: 1171734300955501410
+    second: Dowser_benddown_6
+  - first:
+      213: 8535150618989278111
+    second: Dowser_benddown_7
+  - first:
+      213: -3468007520433761754
+    second: Dowser_benddown_8
+  - first:
+      213: 6893048055482652025
+    second: Dowser_benddown_9
+  - first:
+      213: -7531174585047017190
+    second: Dowser_benddown_10
+  - first:
+      213: 7872012037264665664
+    second: Dowser_benddown_11
+  - first:
+      213: 8684302507479424299
+    second: Dowser_benddown_12
+  - first:
+      213: -746825662054331229
+    second: Dowser_benddown_13
+  - first:
+      213: 179275896633223469
+    second: Dowser_benddown_14
+  - first:
+      213: 7830522831180700711
+    second: Dowser_benddown_15
+  - first:
+      213: -9072701010929112100
+    second: Dowser_benddown_16
+  - first:
+      213: -1971541834618987005
+    second: Dowser_benddown_17
+  - first:
+      213: -6470819764350064701
+    second: Dowser_benddown_18
+  - first:
+      213: 1644335473535218495
+    second: Dowser_benddown_19
+  - first:
+      213: -7512960834421753157
+    second: Dowser_benddown_20
+  - first:
+      213: 5788854170771504020
+    second: Dowser_benddown_21
+  - first:
+      213: 3645406879787268881
+    second: Dowser_benddown_22
+  - first:
+      213: -4261942902449070540
+    second: Dowser_benddown_23
+  - first:
+      213: -9187043545140050524
+    second: Dowser_benddown_24
+  - first:
+      213: 3541449698725834504
+    second: Dowser_benddown_25
+  - first:
+      213: -6238305119002051580
+    second: Dowser_benddown_26
+  - first:
+      213: 664526941990605633
+    second: Dowser_benddown_27
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dowser_benddown_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 60
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cda4a68a8f0993b20800000000000000
+      internalID: 3114680014955236060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 66
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae241d89b7ffbae80800000000000000
+      internalID: -8166152592996351254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_2
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 0
+        width: 58
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a4990d7e2fc4be0800000000000000
+      internalID: -1491550299115402679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_3
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 0
+        width: 59
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83ccc9b25414d4df0800000000000000
+      internalID: -194427443566818248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_4
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 0
+        width: 56
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36cd272529dfbd1d0800000000000000
+      internalID: -3324785094992667549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_5
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 0
+        width: 63
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d3da50e4e1d63a70800000000000000
+      internalID: 8806456902316381138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_6
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 0
+        width: 69
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 263e79b7326d24010800000000000000
+      internalID: 1171734300955501410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_7
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 0
+        width: 68
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f93bf4d4442f27670800000000000000
+      internalID: 8535150618989278111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_8
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 0
+        width: 63
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6229922d8892fdfc0800000000000000
+      internalID: -3468007520433761754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_9
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 0
+        width: 57
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9759dbe7fa609af50800000000000000
+      internalID: 6893048055482652025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_10
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 0
+        width: 54
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1992d4ed94eb7790800000000000000
+      internalID: -7531174585047017190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_11
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 0
+        width: 64
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c62cc7d310f3d60800000000000000
+      internalID: 7872012037264665664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_12
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 0
+        width: 65
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d58508e17d48870800000000000000
+      internalID: 8684302507479424299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_13
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 0
+        width: 69
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ac0b18640eb2a5f0800000000000000
+      internalID: -746825662054331229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_14
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 0
+        width: 71
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d29ec976a7aec7200800000000000000
+      internalID: 179275896633223469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_15
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 0
+        width: 69
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72c9c1ee60b9bac60800000000000000
+      internalID: 7830522831180700711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_16
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 0
+        width: 69
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb2e32ff7a471280800000000000000
+      internalID: -9072701010929112100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_17
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 0
+        width: 75
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e96b7a52da3a4e0800000000000000
+      internalID: -1971541834618987005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_18
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 0
+        width: 77
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c7665c45b70336a0800000000000000
+      internalID: -6470819764350064701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_19
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 0
+        width: 77
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f33f3afa66ad1d610800000000000000
+      internalID: 1644335473535218495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_20
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 0
+        width: 77
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba7edc2de99cb790800000000000000
+      internalID: -7512960834421753157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_21
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 0
+        width: 76
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49bbf599234265050800000000000000
+      internalID: 5788854170771504020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_22
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 0
+        width: 75
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b3c733e36179230800000000000000
+      internalID: 3645406879787268881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_23
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 0
+        width: 69
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e968ec2898ad4c0800000000000000
+      internalID: -4261942902449070540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_24
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 0
+        width: 67
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a5c1eb1290118080800000000000000
+      internalID: -9187043545140050524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_25
+      rect:
+        serializedVersion: 2
+        x: 1702
+        y: 0
+        width: 69
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80fa772dcb1c52130800000000000000
+      internalID: 3541449698725834504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_26
+      rect:
+        serializedVersion: 2
+        x: 1772
+        y: 0
+        width: 69
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40cb165db861d69a0800000000000000
+      internalID: -6238305119002051580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dowser_benddown_27
+      rect:
+        serializedVersion: 2
+        x: 1844
+        y: 0
+        width: 69
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 143d601abbfd83900800000000000000
+      internalID: 664526941990605633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
