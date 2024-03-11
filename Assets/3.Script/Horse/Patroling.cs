@@ -133,13 +133,14 @@ public class Patroling : MonoBehaviour
     private void DetectOilSpot()
     {
         RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(2, 2), 0f, -transform.up, 100f, OilSpotLayer);
+
         if (hit)
         {
             dowserAnimator.SetTrigger("FindOil");
             hit.collider.gameObject.layer = 0;
 
             isFindOil = true;
-            Destroy(gameObject, 7f);
+            Destroy(gameObject, 6f);
         }
 
 
