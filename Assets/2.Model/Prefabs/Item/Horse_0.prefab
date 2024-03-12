@@ -96,7 +96,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 16279b35e4dcf7c409152cf7e5779c50, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -280,7 +280,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: ce40d43961dc3b34cabf99842fff7743, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -386,9 +386,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DragObj: {fileID: 2107098683690941232}
   LoadPos: {x: 0, y: 0, z: 0}
+  isOilStorage: 0
+  isOverPresssed: 0
+  isFinish: 0
   isBeingHeld: 1
   isInLine: 1
   SpaceObjPosY: -0.422
+  oilStorage: {fileID: 0}
 --- !u!114 &2107098683690941245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,20 +405,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ae28445b8c97fe48b03fa78e2561a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointA: {fileID: 0}
-  pointB: {fileID: 0}
+  pointA: {x: 0, y: 0, z: 0}
+  pointB: {x: 0, y: 0, z: 0}
   rb: {fileID: 0}
   anim: {fileID: 2107098682770007442}
   anim2: {fileID: 2107098683598495032}
-  anim3: {fileID: 0}
   dowserAnimator: {fileID: 0}
-  currentPoint: {fileID: 0}
+  currentPoint: {x: 0, y: 0, z: 0}
   speed: 2
   isDowser: 0
   isHorse: 1
   OilSpotLayer:
     serializedVersion: 2
     m_Bits: 0
+  isSettingUnit: 0
+  isSettingUnit_RightFactory: 0
+  isSettingUnit_LeftFactory: 0
 --- !u!114 &-2937224933214996009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,6 +435,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFillOil: 0
   horseOil: {fileID: 2107098683379062806}
+  filloil: 0
+  myIndex: 0
 --- !u!1 &2107098684144219773
 GameObject:
   m_ObjectHideFlags: 0

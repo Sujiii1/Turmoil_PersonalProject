@@ -120,9 +120,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DragObj: {fileID: 2411016071047801058}
   LoadPos: {x: 0, y: 0, z: 0}
+  isOilStorage: 0
+  isOverPresssed: 0
+  isFinish: 0
   isBeingHeld: 1
   isInLine: 1
   SpaceObjPosY: -0.6
+  oilStorage: {fileID: 0}
 --- !u!50 &3384979893798561487
 Rigidbody2D:
   serializedVersion: 4
@@ -182,16 +186,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ae28445b8c97fe48b03fa78e2561a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointA: {fileID: 0}
-  pointB: {fileID: 0}
+  pointA: {x: 0, y: 0, z: 0}
+  pointB: {x: 0, y: 0, z: 0}
   rb: {fileID: 0}
   anim: {fileID: 0}
   anim2: {fileID: 0}
   dowserAnimator: {fileID: 2411016071047801059}
-  currentPoint: {fileID: 0}
+  currentPoint: {x: 0, y: 0, z: 0}
   speed: 1
   isDowser: 1
   isHorse: 0
   OilSpotLayer:
     serializedVersion: 2
     m_Bits: 32768
+  isSettingUnit: 0
+  isSettingUnit_RightFactory: 0
+  isSettingUnit_LeftFactory: 0

@@ -23,7 +23,7 @@ public class FillSlider : MonoBehaviour
     {
         if(isNowPressing)
         {
-            Deduct(0.03f);
+            Deduct(0.04f);
         }
     }
 

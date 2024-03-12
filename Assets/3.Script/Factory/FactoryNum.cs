@@ -12,51 +12,125 @@ public class FactoryNum : MonoBehaviour
 
 
 
-    public void BtnUp()
+    public void BtnUp(bool isRight)
     {
         numInt += 1;
         numText.text = numInt.ToString();
 
-        for(int i = 0; i < numInt; i++)
+
+        if(isRight)
         {
             //가장 먼 착즙기를 찾고 그 곳을 HorsePatroling의 A지점으로 바꾸기 (해당 Factory가 A라면 B지점으로)
             //나중에 null 예외처리 
+            foreach (HorseUnit a in GameManager.Instance.horseUnitList)
+            {
+                if (a.gameObject.GetComponent<Patroling>().isSettingUnit) continue;
 
-            if (isRight)
-            {
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().ChangeAPoint(FindMostFarPressed());
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().SetHavePoint(false);
-            }
-            else
-            {
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().ChangeBPoint(FindMostFarPressed());
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().SetHavePoint(false);
+
+                Patroling horseData = a.gameObject.GetComponent<Patroling>();
+
+                if (isRight)
+                {
+                    horseData.ChangeAPoint(FindMostFarPressed());
+                    horseData.SetHavePoint(false);
+
+                    horseData.isSettingUnit = true;
+                    horseData.isSettingUnit_RightFactory = true;
+                    horseData.isSettingUnit_LeftFactory = false;
+                    break;
+                }
+                else
+                {
+                    horseData.ChangeBPoint(FindMostFarPressed());
+                    horseData.SetHavePoint(false);
+
+                    horseData.isSettingUnit = true;
+                    horseData.isSettingUnit_RightFactory = true;
+                    horseData.isSettingUnit_LeftFactory = false;
+                    break;
+                }
             }
         }
-    }
-
-
-    public void BtnDown()
-    {
-        for (int i = 0; i < numInt; i++)
+        else
         {
-            if(i == numInt-1)
-            {
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().SetHavePoint(true);
-                continue;
-            }
-
             //가장 먼 착즙기를 찾고 그 곳을 HorsePatroling의 A지점으로 바꾸기 (해당 Factory가 A라면 B지점으로)
             //나중에 null 예외처리 
-            if (isRight)
+            foreach (HorseUnit a in GameManager.Instance.horseUnitList)
             {
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().ChangeAPoint(FindMostFarPressed());
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().SetHavePoint(false);
+                if (a.gameObject.GetComponent<Patroling>().isSettingUnit) continue;
+
+
+                Patroling horseData = a.gameObject.GetComponent<Patroling>();
+
+                if (isRight)
+                {
+                    horseData.ChangeAPoint(FindMostFarPressed());
+                    horseData.SetHavePoint(false);
+
+                    horseData.isSettingUnit = true;
+                    horseData.isSettingUnit_RightFactory = false;
+                    horseData.isSettingUnit_LeftFactory = true;
+                    break;
+                }
+                else
+                {
+                    horseData.ChangeBPoint(FindMostFarPressed());
+                    horseData.SetHavePoint(false);
+
+                    horseData.isSettingUnit = true;
+                    horseData.isSettingUnit_RightFactory = false;
+                    horseData.isSettingUnit_LeftFactory = true;
+                    break;
+                }
             }
-            else
+        }
+
+
+
+
+
+
+
+
+        /*        for(int i = 0; i < numInt; i++)
+                {
+
+                }*/
+    }
+
+    public void BtnDown(bool isRight)
+    {
+
+        if (isRight)
+        {
+            foreach (HorseUnit a in GameManager.Instance.horseUnitList)
             {
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().ChangeBPoint(FindMostFarPressed());
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().SetHavePoint(false);
+                if (a.gameObject.GetComponent<Patroling>().isSettingUnit_RightFactory)
+                {
+                    a.gameObject.GetComponent<Patroling>().SetHavePoint(true);
+
+
+                    a.gameObject.GetComponent<Patroling>().isSettingUnit = false;
+                    a.gameObject.GetComponent<Patroling>().isSettingUnit_RightFactory = false;
+                    a.gameObject.GetComponent<Patroling>().isSettingUnit_LeftFactory = false;
+                    break;
+                }
+            }
+        }
+        else
+        {
+            foreach (HorseUnit a in GameManager.Instance.horseUnitList)
+            {
+                if (a.gameObject.GetComponent<Patroling>().isSettingUnit_LeftFactory)
+                {
+                    a.gameObject.GetComponent<Patroling>().SetHavePoint(true);
+
+
+                    a.gameObject.GetComponent<Patroling>().isSettingUnit = false;
+                    a.gameObject.GetComponent<Patroling>().isSettingUnit_RightFactory = false;
+                    a.gameObject.GetComponent<Patroling>().isSettingUnit_LeftFactory = false;
+                    break;
+                }
             }
         }
 
@@ -64,21 +138,34 @@ public class FactoryNum : MonoBehaviour
         numInt -= 1;
         numText.text = numInt.ToString();
 
-        for (int i = 0; i < numInt; i++)
+
+
+        /*        for (int i = 0; i < numInt; i++)
         {
-            //가장 먼 착즙기를 찾고 그 곳을 HorsePatroling의 A지점으로 바꾸기 (해당 Factory가 A라면 B지점으로)
-            //나중에 null 예외처리 
-            if (isRight)
+            if(i == numInt-1)
             {
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().ChangeAPoint(FindMostFarPressed());
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().SetHavePoint(false);
+                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().SetHavePoint(true);
+                continue;
             }
-            else
-            {
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().ChangeBPoint(FindMostFarPressed());
-                GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().SetHavePoint(false);
-            }
-        }
+
+
+        }*/
+
+        /*        for (int i = 0; i < numInt; i++)
+                {
+                    //가장 먼 착즙기를 찾고 그 곳을 HorsePatroling의 A지점으로 바꾸기 (해당 Factory가 A라면 B지점으로)
+                    //나중에 null 예외처리 
+                    if (isRight)
+                    {
+                        GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().ChangeAPoint(FindMostFarPressed());
+                        GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().SetHavePoint(false);
+                    }
+                    else
+                    {
+                        GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().ChangeBPoint(FindMostFarPressed());
+                        GameManager.Instance.horseUnitList[i].gameObject.GetComponent<Patroling>().SetHavePoint(false);
+                    }
+                }*/
     }
 
     private Vector3 FindMostFarPressed()

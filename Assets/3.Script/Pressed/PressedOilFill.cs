@@ -55,7 +55,7 @@ public class PressedOilFill : MonoBehaviour
             gameObject.layer = 0;
         }
 
-        currentOilValue = (nowValue * 1000);
+        currentOilValue = (nowValue * 800);
         oilSprite.size = new Vector2(width, nowValue);
     }
 }

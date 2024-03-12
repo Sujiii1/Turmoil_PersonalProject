@@ -693,7 +693,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 119619955}
-  - component: {fileID: 119619956}
   m_Layer: 0
   m_Name: Type_s3
   m_TagString: Untagged
@@ -722,21 +721,6 @@ RectTransform:
   m_AnchoredPosition: {x: 213, y: -198}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &119619956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119619954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbde4a7717811964596c66dbcbcb032c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxValue: 1500
-  fill: {fileID: 1952687073}
-  isNowPressing: 0
 --- !u!1 &151207651
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,7 +762,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 151718296}
-  - component: {fileID: 151718297}
   m_Layer: 0
   m_Name: Type_s2
   m_TagString: Untagged
@@ -807,21 +790,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -395}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &151718297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 151718295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbde4a7717811964596c66dbcbcb032c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxValue: 1500
-  fill: {fileID: 1914273720}
-  isNowPressing: 0
 --- !u!1 &185435568
 GameObject:
   m_ObjectHideFlags: 0
@@ -1587,7 +1555,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 496297206}
-  - component: {fileID: 496297207}
   m_Layer: 0
   m_Name: Type_s4
   m_TagString: Untagged
@@ -1616,21 +1583,6 @@ RectTransform:
   m_AnchoredPosition: {x: -820, y: -174}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &496297207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 496297205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbde4a7717811964596c66dbcbcb032c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxValue: 1500
-  fill: {fileID: 1444720889}
-  isNowPressing: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1725,7 +1677,7 @@ GameObject:
   - component: {fileID: 539055967}
   - component: {fileID: 539055969}
   - component: {fileID: 539055968}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Right_Money
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1925,7 +1877,7 @@ GameObject:
   - component: {fileID: 591891730}
   - component: {fileID: 591891732}
   - component: {fileID: 591891731}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Left_Money
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2318,7 +2270,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1268255874}
         m_TargetAssemblyTypeName: FactoryNum, Assembly-CSharp
         m_MethodName: BtnDown
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4196,14 +4148,14 @@ MonoBehaviour:
       - m_Target: {fileID: 1809711415}
         m_TargetAssemblyTypeName: FactoryNum, Assembly-CSharp
         m_MethodName: BtnUp
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1165147584
 MonoBehaviour:
@@ -4812,7 +4764,7 @@ GameObject:
   - component: {fileID: 1268255872}
   - component: {fileID: 1268255874}
   - component: {fileID: 1268255873}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Left_Factory
   m_TagString: Factory
   m_Icon: {fileID: 0}
@@ -5064,7 +5016,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1268255874}
         m_TargetAssemblyTypeName: FactoryNum, Assembly-CSharp
         m_MethodName: BtnUp
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5234,6 +5186,7 @@ GameObject:
   - component: {fileID: 1444720890}
   - component: {fileID: 1444720889}
   - component: {fileID: 1444720888}
+  - component: {fileID: 1444720891}
   m_Layer: 15
   m_Name: Fill
   m_TagString: OilSpot
@@ -5329,6 +5282,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1444720886}
   m_CullTransparentMesh: 1
+--- !u!114 &1444720891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444720886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbde4a7717811964596c66dbcbcb032c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxValue: 1500
+  fill: {fileID: 1444720889}
+  isNowPressing: 0
 --- !u!1 &1477779107
 GameObject:
   m_ObjectHideFlags: 0
@@ -5825,14 +5793,14 @@ MonoBehaviour:
       - m_Target: {fileID: 1809711415}
         m_TargetAssemblyTypeName: FactoryNum, Assembly-CSharp
         m_MethodName: BtnDown
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1519490749
 MonoBehaviour:
@@ -6781,7 +6749,7 @@ GameObject:
   - component: {fileID: 1809711413}
   - component: {fileID: 1809711415}
   - component: {fileID: 1809711414}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Right_Factory
   m_TagString: Factory
   m_Icon: {fileID: 0}
@@ -7096,6 +7064,7 @@ GameObject:
   - component: {fileID: 1914273721}
   - component: {fileID: 1914273720}
   - component: {fileID: 1914273719}
+  - component: {fileID: 1914273722}
   m_Layer: 15
   m_Name: Fill
   m_TagString: OilSpot
@@ -7190,6 +7159,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914273717}
   m_CullTransparentMesh: 1
+--- !u!114 &1914273722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914273717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbde4a7717811964596c66dbcbcb032c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxValue: 1500
+  fill: {fileID: 1914273720}
+  isNowPressing: 0
 --- !u!1 &1952504246
 GameObject:
   m_ObjectHideFlags: 0
@@ -7281,6 +7265,7 @@ GameObject:
   - component: {fileID: 1952687074}
   - component: {fileID: 1952687073}
   - component: {fileID: 1952687072}
+  - component: {fileID: 1952687075}
   m_Layer: 15
   m_Name: Fill
   m_TagString: OilSpot
@@ -7375,6 +7360,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1952687070}
   m_CullTransparentMesh: 1
+--- !u!114 &1952687075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952687070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbde4a7717811964596c66dbcbcb032c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxValue: 1500
+  fill: {fileID: 1952687073}
+  isNowPressing: 0
 --- !u!1 &2094856610
 GameObject:
   m_ObjectHideFlags: 0
@@ -8078,6 +8078,9 @@ MonoBehaviour:
   OilSpotLayer:
     serializedVersion: 2
     m_Bits: 0
+  isSettingUnit: 0
+  isSettingUnit_RightFactory: 0
+  isSettingUnit_LeftFactory: 0
 --- !u!1 &836811606532391929
 GameObject:
   m_ObjectHideFlags: 0

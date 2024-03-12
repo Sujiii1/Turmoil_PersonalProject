@@ -13,7 +13,6 @@ public class Patroling : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator anim;
     [SerializeField] private Animator anim2;
-   // [SerializeField] private Animator anim3;
     [SerializeField] private Animator dowserAnimator;
     [SerializeField] private Vector3 currentPoint;
     public float speed;
@@ -28,6 +27,16 @@ public class Patroling : MonoBehaviour
     private bool isNoHavePoint = false;
     private bool isRight = true;
 
+    private bool isPressedFilled = false; // Pressed 오브젝트에 기름이 채워졌는지 여부
+
+
+    private bool isPressedLayerIgnored = false;
+
+
+    public bool isSettingUnit = false;
+    public bool isSettingUnit_RightFactory = false;
+    public bool isSettingUnit_LeftFactory = false;
+
     private void Awake()
     {
         pointA = new Vector3(-7f, -1.2f, -1f);
@@ -41,25 +50,35 @@ public class Patroling : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         currentPoint = pointB;
-        if(isHorse)
+        if (isHorse)
         {
             anim.SetBool("isRunning", true);
             anim2.SetBool("isRunning", true);
-           // anim.SetBool("isQuest", true);
         }
         Physics2D.IgnoreLayerCollision(7, 8, true);
         Physics2D.IgnoreLayerCollision(7, 7, true);
+        Physics2D.IgnoreLayerCollision(7, 9, true);
     }
 
     private void Update()
     {
-        if (isFindOil) return;
+        if (isFindOil || isNoHavePoint ) return;
         timer -= Time.deltaTime;
+
+        if (isDowser && timer <= 0)
+        {
+            DetectOilSpot();
+        }
+
+        //UpdatePressedLayerCollision();
     }
 
 
     private void FixedUpdate()
     {
+        if (isDowser) HorsePos();
+
+        if (!isSettingUnit) return;
         HorsePos();
     }
 
@@ -71,9 +90,9 @@ public class Patroling : MonoBehaviour
             return;
         }
 
-        if(isDowser)
+        if (isDowser)
         {
-            if(dowserAnimator.GetCurrentAnimatorStateInfo(0).IsName("Dowser_benddown") && dowserAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime <= 1.0f)
+            if (dowserAnimator.GetCurrentAnimatorStateInfo(0).IsName("Dowser_benddown") && dowserAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime <= 1.0f)
             {
                 rb.velocity = Vector2.zero;
                 return;
@@ -97,7 +116,7 @@ public class Patroling : MonoBehaviour
 
         if (Vector2.Distance(transform.position, currentPoint) <= 1.0f && currentPoint == pointB)
         {
-            if(isRight)
+            if (isRight)
             {
                 Filp();
                 currentPoint = pointA;
@@ -130,6 +149,7 @@ public class Patroling : MonoBehaviour
         }
     }
 
+
     private void DetectOilSpot()
     {
         RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(2, 2), 0f, -transform.up, 100f, OilSpotLayer);
@@ -140,11 +160,10 @@ public class Patroling : MonoBehaviour
             hit.collider.gameObject.layer = 0;
 
             isFindOil = true;
-            Destroy(gameObject, 6f);
+            Destroy(gameObject, 5f);
         }
-
-
     }
+
     private void Filp()
     {
         Vector3 localScale = transform.localScale;
@@ -152,30 +171,41 @@ public class Patroling : MonoBehaviour
         transform.localScale = localScale;
     }
 
+    private void UpdatePressedLayerCollision()
+    {
+        if (isDowser && !isPressedFilled && !isPressedLayerIgnored)
+        {
+            // Pressed 레이어와의 충돌을 무시
+            Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("Pressed"), true);
+            isPressedLayerIgnored = true;
+        }
+        else if ((!isDowser || isPressedFilled) && isPressedLayerIgnored)
+        {
+            // Pressed 레이어와의 충돌을 다시 활성화
+            Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("Pressed"), false);
+            isPressedLayerIgnored = false;
+        }
+    }
 
 
     public void ChangeAPoint(Vector3 newAPoint)
     {
-        Debug.Log(pointA);
         pointA = newAPoint;
 
-        if(!isRight)
+        if (!isRight)
         {
             currentPoint = pointA;
         }
-        Debug.Log(pointA);
     }
 
     public void ChangeBPoint(Vector3 newBPoint)
     {
-        Debug.Log(pointB);
         pointB = newBPoint;
 
-        if(isRight)
+        if (isRight)
         {
             currentPoint = pointB;
         }
-        Debug.Log(pointB);
     }
 
     public void SetHavePoint(bool value)
@@ -199,15 +229,23 @@ public class Patroling : MonoBehaviour
         {
             isNoHavePoint = value;
         }
-
-
-
     }
 
-    /*    private void OnDrawGizmos()
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Pressed"))
         {
-            Gizmos.DrawWireSphere(pointA.transform.position, 0.5f);
-            Gizmos.DrawWireSphere(pointB.transform.position, 0.5f);
-            Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
-        }*/
+            if (!isFindOil && isDowser && isPressedFilled) // Pressed 오브젝트에 기름이 채워져 있을 때만 충돌 처리
+            {
+                DetectOilSpot();
+            }
+        }
+    }
+
+    public void SetPressedFilled(bool filled)
+    {
+        isPressedFilled = filled;
+    }
+
+
 }

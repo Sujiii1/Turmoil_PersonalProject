@@ -2370,7 +2370,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1268255874}
         m_TargetAssemblyTypeName: FactoryNum, Assembly-CSharp
         m_MethodName: BtnDown
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4013,14 +4013,14 @@ MonoBehaviour:
       - m_Target: {fileID: 1809711415}
         m_TargetAssemblyTypeName: FactoryNum, Assembly-CSharp
         m_MethodName: BtnUp
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1165147584
 MonoBehaviour:
@@ -4881,7 +4881,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1268255874}
         m_TargetAssemblyTypeName: FactoryNum, Assembly-CSharp
         m_MethodName: BtnUp
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5642,14 +5642,14 @@ MonoBehaviour:
       - m_Target: {fileID: 1809711415}
         m_TargetAssemblyTypeName: FactoryNum, Assembly-CSharp
         m_MethodName: BtnDown
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1519490749
 MonoBehaviour:
@@ -7841,6 +7841,9 @@ MonoBehaviour:
   OilSpotLayer:
     serializedVersion: 2
     m_Bits: 0
+  isSettingUnit: 0
+  isSettingUnit_RightFactory: 0
+  isSettingUnit_LeftFactory: 0
 --- !u!1 &836811606532391929
 GameObject:
   m_ObjectHideFlags: 0

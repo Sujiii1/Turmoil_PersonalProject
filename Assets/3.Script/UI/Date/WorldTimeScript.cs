@@ -9,7 +9,7 @@ namespace WorldTime
     {
         public event EventHandler<TimeSpan> WorldTimeChanged;
         [SerializeField] private float _dayLength = 1440f; // 하루 길이 (초)
-        private const float slowTime = 8f; // 시간 흐름 천천히
+        private const float slowTime = 5f; // 시간 흐름 천천히
 
         private TimeSpan _currentTime;
         private float _minuteLength => _dayLength / WorldTimeConstans.MinutesInDay * slowTime; // 시간이 천천히 흐르도록 변경
